@@ -1,0 +1,46 @@
+# Shell Expansion 
+
+## Introduction
+- When shell receives a command, bash performs several processes upon the input before it carries out of the command.
+- With expansion, when we type something and it is expanded into something else before the shell acts upon it.
+
+- Below is the list of expansions:
+    - [Pathname Expansion](#pathname-expansion)
+    - [Tilde Expansion](#tilde-expansion)
+    - [Arithmetic Expansion](#arithmetic-expansion)
+    - [Brace Expansion](#brace-expansion)
+    - [Parameter Expansion](#parameter-expansion)
+    - [Command Substitution](#command-substitution)
+
+## Pathname Expansion
+- Bash supports three simple wildcards:
+    1. &nbsp; \* &nbsp; - &nbsp; Matches any strings, including the null string.
+    2. &nbsp; ? &nbsp; - &nbsp; Matches any single character.
+    3. &nbsp; [...] &nbsp; - &nbsp; Matches any one of the enclosed characters.  
+      <br />
+    ```bash
+    ##trying to match everything in the working directory with * character
+    dev@dev: ls * 
+    Desktop Documents Downloads ...
+
+
+    ##create a file called '1' and match it with ? character
+    dev@dev: touch 1 && echo ? 
+    1 
+
+    ##create files 1 123 a and match with case [123a]
+    dev@dev: touch 1 123 a && echo [123a]
+    1 a
+    ```
+
+
+## Tilde Expansion
+
+## Arithmetic Expansion
+
+## Brace Expansion
+
+## Parameter Expansion
+
+## Command Substitution
+    
