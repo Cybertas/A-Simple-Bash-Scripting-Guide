@@ -35,6 +35,10 @@
 
 
 ## Tilde Expansion
+  ~  represents your home directory 
+  you can check current directory using echo ~+
+  you can check previous directory using echo ~-
+
 
 ## Arithmetic Expansion
 
@@ -43,4 +47,6 @@
 ## Parameter Expansion
 
 ## Command Substitution
-    
+
+## Variable Substition 
+  - $ means reference to the value of the variable 
