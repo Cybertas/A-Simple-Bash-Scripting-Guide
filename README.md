@@ -30,8 +30,8 @@ A simple guide to Bash scripting.
         - e.g. Loops, Functions, Positional Parameters...
 
 ## Prerequisites 
-- A Bash Environment, which is the default Shell on many Linux Distros.
-- To learn Bash on Windows, use WSL2 or a Virtual Machine.
+- A Bash Shell, which comes by default on many Linux Distros.
+- To learn Bash on Windows, use Windows Linux Sub-system or Virtual Machines.
 
 ## Resources
 - **For Advanced Usage:** [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
@@ -44,4 +44,4 @@ This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDe
 ## Author
 - Yu(Chris) Hao
 - LinkedIn: [Yu Hao](https://www.linkedin.com/in/yuhao-/)
-- Personal Remark: this is a study note summarized to learn Bash and pass SC103: Shell Scripting Using Bash
+- Personal Remark: guide is summarized based on study notes for SC103 exam and it is used as personal reference. 
