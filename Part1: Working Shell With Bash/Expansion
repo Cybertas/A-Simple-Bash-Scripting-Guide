@@ -35,10 +35,31 @@
 
 
 ## Tilde Expansion
-  ~  represents your home directory 
-  you can check current directory using echo ~+
-  you can check previous directory using echo ~-
+- Tilde (~) represents your home directory in bash shell
+- Some usecases below: 
 
+  ```bash
+  ##change directly to your home directory 
+  dev@dev: cd ~ && pwd
+  /home/dev
+
+  ##set your home directory to another directory 
+  dev@dev: HOME=/home/dev/Desktop
+  dev@dev: echo ~
+  /home/dev/Desktop
+
+  ##checking previous directory 
+  dev@dev: pwd; cd ..
+  /home/dev/Desktop
+  dev@dev: echo ~-
+  /home/dev/Desktop
+
+  ##checking current directory 
+  dev@dev: pwd
+  /home/dev
+  dev@dev: echo ~+
+  /home/dev
+  ```
 
 ## Arithmetic Expansion
 
