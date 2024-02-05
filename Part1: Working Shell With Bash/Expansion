@@ -62,8 +62,19 @@
   ```
 
 ## Arithmetic Expansion
+- Enables numeric calculations using bash 
+  - $(&nbsp;(&nbsp;&nbsp;&nbsp;)&nbsp;) &nbsp; - &nbsp; expression 
+  ```bash
+    ## Addition - (+) 
+    ## Subtraction - (-)
+    ## Multiplication - (*) 
+    ## Division (Integer Only) - (/) 
+    ## Modulo - (%)
+    ## Exponentiation - (**) 
+  ```
 
 ## Brace Expansion
+{}
 
 ## Parameter Expansion
 
