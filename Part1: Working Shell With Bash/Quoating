@@ -1,0 +1,3 @@
+# Quoting 
+## Introdcution 
+- Bash shell will expand certain keywords or characters thus quoating will prevent unwanted expansions 
