@@ -25,4 +25,24 @@
 - Most special characters used by the shell will lose their properties and are treated as ordinary characters
 - With exception of ($), (\), (`)
 
+    ```bash
+    dev@dev: echo "this is $100.00"
+    this is .00
+
+    dev@dev: echo "show directory $(ls)"
+    Desktop Documents Downloads ...
+    ```
+
 ## Escaping Characters
+- To unquote a special character use the (\) 
+    ```bash
+    dev@dev: echo "this is \$100.00"
+    this is $100.00
+
+    dev@dev: touch &file.txt
+    touch: missing file operand
+    ...
+
+    dev@dev: touch \&file.txt && ls
+    file.txt
+    ```
