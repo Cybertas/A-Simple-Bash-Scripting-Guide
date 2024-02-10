@@ -62,23 +62,58 @@
   ```
 
 ## Arithmetic Expansion
-- Enables numeric calculations using bash 
-  - $(&nbsp;(&nbsp;&nbsp;&nbsp;)&nbsp;) &nbsp; - &nbsp; expression 
+- Numerical calculations using bash  
+  - $(&nbsp;(&nbsp;expression&nbsp;)&nbsp;) &nbsp; 
   ```bash
     ## Addition - (+) 
+    dev@dev: echo $((12+42))       ## output: 54
+
     ## Subtraction - (-)
+    dev@dev: echo $((10-1))        ##output: 9
+    
     ## Multiplication - (*) 
+    dev@dev: echo $((2*2))         ##output: 4
+    
     ## Division (Integer Only) - (/) 
+    dev@dev: echo $((6/2))         ##output: 3
+    
     ## Modulo - (%)
-    ## Exponentiation - (**) 
+    dev@dev: echo $((9%3))         ##output: 0
+    
+    ## Exponentiation - (**)
+    dev@dev: echo $((2**6))        ##output: 64
   ```
 
 ## Brace Expansion
-{}
+- Manipulating strings and names using pattern
+  - {&nbsp; expression &nbsp;}
+  - Patterns to be expanded may contain a prefix and suffix called preamble and postscript. 
+  - The brace expression itself may contain either a comma-separated list of strings or a range of integers of single characters. 
+  ```bash
+  ##Create 5 files from 1 to 5
+  dev@dev: touch file{1..5} && ls
+  file1 file2 file3 file4 file5 something.txt
+
+  dev@dev: rm file{1..5} && ls
+  something.txt
+
+  dev@dev: touch prefix-{X,Y,Z}-suffix.txt
+  prefix-X-suffix.txt prefix-Y-suffix.txt prefix-Z-suffix.txt
+  ```
 
 ## Parameter Expansion
+- Variables substitution in bash 
+  - (&nbsp;$&nbsp;) - references the value of a variable 
+  ```bash
+  dev@dev: echo $PWD
+  /home/dev
+
+  dev@dev: var="Hello World!
+  dev@dev: echo $var
+  ```
 
 ## Command Substitution
+
 
 ## Variable Substition 
   - $ means reference to the value of the variable 
