@@ -1,0 +1,19 @@
+# Globbing (Wildcard)
+## Introduction 
+Wildcard can be used to match with groups of strings 
+
+| Wildcard     | Description |
+| -----------  | ----------- |
+| *            | Title       |
+| ?            | Text        |
+| [Characters] | Text        |
+| [!Characters]| Text        |
+| [[:Class:]]  | Text        |
+
+| Character Class    | Description    |
+| -----------  | ----------- |
+| [:alnum:]    | Title       |
+| [:alpha:]    | Text        |
+| [:digit:]    | Text        |
+| [:lower:]    | Text        |
+| [:upper:]    | Text        |
