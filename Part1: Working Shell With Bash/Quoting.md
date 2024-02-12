@@ -1,5 +1,4 @@
 # Quoting 
-## Introduction  
 - Bash shell will expand certain keywords or characters thus quoting will prevent unwanted expansions 
     
     ```bash

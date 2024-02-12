@@ -1,6 +1,4 @@
 # Shell Expansion 
-
-## Introduction
 - When shell receives a command, bash performs several processes upon the input before it carries out of the command.
 - With expansion, when we type something and it is expanded into something else before the shell acts upon it.
 
