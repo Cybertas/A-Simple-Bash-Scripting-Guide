@@ -113,7 +113,12 @@
   ```
 
 ## Command Substitution
+- Allow the use of output of a command as an expansion. 
+```bash
+dev@dev: ls $(cd ~)
+Desktop Downloads Documents ...
 
+dev@dev: ls -l $(type -p bash)
+-rwxr-xr-x 1 root root 1396520 Jan  7  2022 /usr/bin/bash
+```
 
-## Variable Substitution 
-  - $ means reference to the value of the variable 
