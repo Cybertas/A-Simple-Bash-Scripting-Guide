@@ -1,6 +1,6 @@
 # The "Get Help" Commands
-- Get Help commands are helpful when you want to have a quick look at a command or you want to discern the specific of what a command can do.
-- 'type' command 
+- The "Get Help" commands are helpful when you want to have a quick look at a command or you want to discern the specific of what a command can do.
+- <code>type</code>  
     - The 'type' command provides information on a name and how it is interpreted in the shell. 
     - It is able to distinguish alias, built-in command, external command, shell function, hashed command or a reserved word. 
     ```bash
@@ -13,7 +13,7 @@
     dev@dev: type do
     do is a shell keyword
     ```
-- 'man' command
+- <code>man</code> 
     - The 'man' command display the manual pages for various commands.
     - The manual pages provide detailed information about the usage, options and behavior. 
     - The 'man' does not display built-in commands directly however you can check under the Bash manual page. 
@@ -23,7 +23,7 @@
      ssh — OpenSSH remote login client
     ...
     ```
-- 'help' command
+- <code>help</code> 
     - The 'help' command provides information about built-in commands.
     - Can use 'type' to find out which type a command is if it is built-in commands then use 'help' to find more.
     ``` bash
@@ -35,8 +35,7 @@
     HOME shell variable.
     ...
     ```
-# Command - Examples 
-
+# Other Useful Commands
 ## Command - (cd)
 
 ## Command - (ls)
