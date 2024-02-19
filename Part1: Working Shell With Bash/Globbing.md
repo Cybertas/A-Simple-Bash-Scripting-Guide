@@ -19,9 +19,11 @@
     | [:lower:]       | Matches any lowercase letter       |
     | [:upper:]       | Matches any uppercase letter      |
     
-    **Table 1.2** - Character Classes and their meaning
+    **Table 1.2** - Character Classes and their meaning 
 
- - Below are examples on Globbing. 
+   </br>
+
+ - Below are examples of Globbing. 
 
     ```bash
     dev@dev: ls 
