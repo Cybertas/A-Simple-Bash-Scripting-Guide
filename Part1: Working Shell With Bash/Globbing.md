@@ -11,6 +11,8 @@
 
     **Table 1.1** - Wildcard and their meaning
 
+    </br>
+
     | Character Class | Description |
     | --------------- | -------------- |
     | [:alnum:]       | Matches any alphanumeric character |
