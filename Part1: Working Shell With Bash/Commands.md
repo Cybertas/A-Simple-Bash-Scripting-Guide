@@ -1,14 +1,3 @@
-1. command are the way to interact with OS on Bash 
-2. all commands are executable or binary file 
-3. commands can be called directly by modifying PATH or called in the location stored
-4. Directory traversal 
-5. get help command
-```bash
-$dev@dev: 
-```
-go through a list of commands 
-cd different path direct and indirect
-
 # Commands - What are they?
 - Commands can be:
     - An executable program
