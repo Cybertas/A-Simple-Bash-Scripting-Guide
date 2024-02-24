@@ -9,7 +9,7 @@
     | [!Characters]| Matches any character that is not a member of the set characters |
     | [[:Character Class:]]  | Matches any character that is a member of the specified class |
 
-    **Table 1.1** - Wildcard and their meaning
+    &nbsp; &nbsp; **Table 1.1** - Wildcard and their meaning
 
     </br>
 
@@ -21,7 +21,7 @@
     | [:lower:]       | Matches any lowercase letter       |
     | [:upper:]       | Matches any uppercase letter      |
     
-    **Table 1.2** - Character Classes and their meaning 
+   &nbsp; &nbsp; **Table 1.2** - Character Classes and their meaning 
 
    </br>
 

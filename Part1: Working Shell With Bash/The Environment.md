@@ -23,13 +23,13 @@
     - A login shell session: A shell that prompts for username and password i.e. SSH session. 
     
     </br>
-
+    
     | File             | Description |
     | ---------------  | --------------  |
     | /etc/bash.bashrc | A global config script that applies to all users                                            |
     | ~/.bashrc | A user's personal startup file         |
     
-    **Table 2.2** - Startup Files for Non-Login Shell Sessions
+    &nbsp; &nbsp; **Table 2.1** - Startup Files for Non-Login Shell Sessions 
 
     </br>
 
@@ -41,7 +41,7 @@
     | ~/.bash_login   | If ~/.bash_profile is not found, bash will attempt to read this instead                    |
     | ~/.profile      | If neither ~/.bash_profile nor ~/.bash_login is found, bash attempts to read this file |
 
-    **Table 2.1** - Startup Files for Login Shell Sessions
+    &nbsp; &nbsp; **Table 2.2** - Startup Files for Login Shell Sessions
 
     
 
