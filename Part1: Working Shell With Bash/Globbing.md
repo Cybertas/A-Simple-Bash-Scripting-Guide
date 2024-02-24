@@ -1,5 +1,5 @@
-# Globbing (Wildcard)
- - Wildcard can be used to match pattern with strings. <br>
+# Globbing
+ - Wildcard characters can be used to match pattern with strings. <br>
 
     | Wildcard     | Description |
     | --------------  | -------------- |
