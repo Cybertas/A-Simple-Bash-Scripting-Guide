@@ -1,11 +1,13 @@
+Need a navigation table, large file
+
 # Regular Expression (Regex)
  - Regular expressions are symbolic notations used to identify patterns in text. 
  - Regular expressions are supported by many command line tools and most programming languages for text manipulation purposes.
 
 ## Regex using Grep 
 - <code>grep</code> - grep searches text files for input patterns and outputs any matches to the standard output. 
-- Regex can be used for pattern matching with grep 
-- Below are simple use cases 
+- Regex can be used for pattern matching with grep.
+- Below are simple use cases: 
     ```bash
     dev@dev: cat TEST
     apple
@@ -26,12 +28,55 @@
 ## Regex Syntax 
 - In additional searching files using direct strings, A Regex pattern consists of one or more character literals, operators, or constructs. 
 
-    | Character Class | Description |
+    | Metacharacters | Description |
     | --------------- | -------------- |
-    | [:alnum:]       | Matches any alphanumeric character |
-    | [:alpha:]       | Matches any alphabetic character   |
-    | [:digit:]       | Matches any numeral                |
-    | [:lower:]       | Matches any lowercase letter       |
-    | [:upper:]       | Matches any uppercase letter       |
+    | .               | Matches any single character |
+    | ^               | Matches a character at the start of a line            |
+    | $               | Matches a character at the end of a line              |
+    | [character]     | Matches any single character in the bracket           |
+
     
-    &nbsp; &nbsp; **Table 3.1** - Startup Files for Non-Login Shell Sessions
+    &nbsp; &nbsp; **Table 3.1** - Regex Metacharacters
+
+    | Character Class | Description |
+    | --------------- | ---------------------------------- |
+    | [:alnum:]       | The alphanumeric characters, [A-Za-z0-9]       |
+    | [:word:]        | Same as [:alnum:] with addition of underscore (_)    |
+    | [:alpha:]       | The alphabetic characters, [A-Za-z]          |
+    | [:blank:]       | Includes the space and tab character         |
+    | [:cntrl:]       | The ASCII control codes            |
+    | [:digit:]       | The numerals 0 - 9                 |
+    | [:graph:]       | The visible characters             |
+    | [:lower:]       | The lowercase letters              |
+    | [:punct:]       | The punctuation characters, [-!"#$%&'()*+,./:;<=>?@[\\\]_`{|}~]                             |
+    | [:print:]       | Same as [:space:] plus the space character         |
+    | [:space:]       | Contains whitespace characters including space, tab, carriage return, newline, vertical tab and form feed, [ \t\r\n\v\f]                       |
+    | [:upper:]        | The uppercase characters          |
+    | [:xdigit:]       | Character used to express hexadecimal numbers, [0-9A-Fa-F]                       |
+
+    &nbsp; &nbsp; **Table 3.2** - Regex Character Classes 
+
+    | Quantifiers     | Description |
+    | --------------- | -------------- |
+    | ?               | Match an Element Zero or One time  |
+    | *               | Match an Element Zero or More time |
+    | +               | Match an Element One or More       |
+    | {}              | Match an Element a Specific number of Times          |
+    
+    &nbsp; &nbsp; **Table 3.2** - Regex Character Classes 
+
+## Regex Examples 
+ - Using the TEST file in test_dir for Regex practice. 
+    ```bash
+    dev@dev: cat TEST
+    apple
+    pear
+    orange 
+    pineapple
+    watermelon
+    banana
+    car
+
+    dev@dev: 
+
+    ```
