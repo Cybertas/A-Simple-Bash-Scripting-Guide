@@ -31,8 +31,8 @@ Need a navigation table, large file
     | Metacharacters | Description |
     | --------------- | -------------- |
     | .               | Matches any single character |
-    | ^               | Matches a character at the start of a line            |
-    | $               | Matches a character at the end of a line              |
+    | ^               | Matches a character at the start of a line (Anchor)          |
+    | $               | Matches a character at the end of a line (Anchor)          |
     | [character]     | Matches any single character in the bracket           |
 
     
@@ -77,6 +77,44 @@ Need a navigation table, large file
     banana
     car
 
-    dev@dev: 
+    ## Dot
+    dev@dev: grep '.a.' TEST
+    pear
+    orange 
+    pineapple
+    watermelon
+    banana
+    PEACH
+    LEMON
+    car
+
+    ## Anchors 
+    dev@dev: grep '^apple' TEST
+    apple
+
+    dev@dev: grep 'apple$' TEST ## find word apple where it occurs at the end of the line
+    apple
+    pineapple 
+
+    ## Bracket Expressions
+    dev@dev: grep '[abc]a' TEST
+    banana
+    car
+
+    dev@dev: grep '[^abc]a' TEST ## negation, first character in bracket expression is ^
+    pear
+    orange 
+    pineapple
+    watermelon
+    banana
+
+    ## Character Classes
+    grep '^[[:upper:]]*$' TEST ## find string with all uppercase
+    PEACH
+    LEMON
+
+    ## Quantifiers
+    grep -E '\b[a-z]{3}\b' TEST ## -E enables extended regular expression, allows the use of quantifiers 
+    car
 
     ```
