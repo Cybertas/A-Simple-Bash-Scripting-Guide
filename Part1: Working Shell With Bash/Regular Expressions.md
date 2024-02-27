@@ -79,15 +79,8 @@
     banana
     car
 
-    ## Dot
-    dev@dev: grep '.a.' TEST
-    pear
-    orange 
-    pineapple
-    watermelon
-    banana
-    PEACH
-    LEMON
+    ## Dot, where \b set the boundary of word matches three characters exactly
+    dev@dev: grep '\b.a.\b' TEST
     car
 
     ## Anchors 
