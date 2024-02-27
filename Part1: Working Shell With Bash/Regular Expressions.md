@@ -111,12 +111,12 @@
     banana
 
     ## Character Classes
-    grep '^[[:upper:]]*$' TEST ## find string with all uppercase
+    dev@dev: grep '^[[:upper:]]*$' TEST ## find string with all uppercase
     PEACH
     LEMON
 
     ## Quantifiers
-    grep -E '\b[a-z]{3}\b' TEST ## -E enables extended regular expression, allows the use of quantifiers 
+    dev@dev: grep -E '\b[a-z]{3}\b' TEST ## -E enables extended regular expression, allows the use of quantifiers 
     car
 
     ```
