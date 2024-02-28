@@ -6,6 +6,7 @@
 
 ## User Administration 
 - The <code>useradd</code> command can be used to created new user.
+    - By default, <code>useradd</code> does not set the password for the new user. To set a password use <code>passwd</code> command.
 - The <code>userdel</code> command can be used to delete users. 
 - The <code>passwd</code> command can be used to change password.
 - The <code>usermod</code> command can be used to modify a user account.
