@@ -23,6 +23,7 @@
 - Often commands accept flags or options, which modifies or provides additional features of the original command. 
 - Below is a snippet of command (ls) with additional flag (-l).
 - Lists all the files in the working directory with outputing the result as list format. 
+- To list all the options of a command use <code>man COMMAND</code>.
 
     ```bash
     dev@dev: ls -l
@@ -30,6 +31,15 @@
     -rw-rw-r-- 1 dev dev 5 Jan 28 18:20 file1
     -rw-rw-r-- 1 dev dev 5 Jan 28 18:20 file2
     -rw-rw-r-- 1 dev dev 5 Jan 28 18:20 file3
+
+    dev@dev: man ls
+    ...
+    NAME
+        ls - list directory contents
+
+    SYNOPSIS
+        ls [OPTION]... [FILE]...
+    ...
     ```
 
 ## The "Get Help" Commands
@@ -51,7 +61,7 @@
 - <code>man</code> 
     - The 'man' command display the manual pages for various commands.
     - The manual pages provide detailed information about the usage, options and behavior. 
-    - The 'man' does not display built-in commands directly however you can check under the Bash manual page. 
+    - The 'man' does not display built-in commands directly however you can check under the Bash manual page for built-in commands. 
 
     ```bash
     dev@dev: man ssh
