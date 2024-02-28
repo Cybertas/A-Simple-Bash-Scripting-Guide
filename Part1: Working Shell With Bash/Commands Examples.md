@@ -45,3 +45,5 @@
 ## Command - (rm)
 
 ## Command - (pwd)
+
+## Command - (sudo)
