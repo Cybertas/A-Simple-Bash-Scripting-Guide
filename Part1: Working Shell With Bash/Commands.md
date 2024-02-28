@@ -19,7 +19,7 @@
     Ls: command not found
     ```
 
-## Flags 
+## Options
 - Often commands accept flags or options, which modifies or provides additional features of the original command. 
 - Below is a snippet of command (ls) with additional flag (-l).
 - Lists all the files in the working directory with outputing the result as list format. 
@@ -61,7 +61,7 @@
 - <code>help</code> 
     - The 'help' command provides information about built-in commands.
     - Can use 'type' to find out which type a command is if it is built-in commands then use 'help' to find more.
-    
+
     ``` bash
     dev@dev: help cd
     cd: cd [-L|[-P [-e]] [-@]] [dir]
