@@ -13,3 +13,6 @@
 
 # To Do 
 - Change the symbols and commands with code tag 
+- Finish the Other Permission Concepts in Permissions.md
+- Finish Files and Directories.md
+- Finish Archive and Compression.md
