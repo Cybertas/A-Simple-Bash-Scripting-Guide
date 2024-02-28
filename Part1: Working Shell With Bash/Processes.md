@@ -106,7 +106,7 @@
 ## Terminating Processes
 - Use the <code> kill</code> command to terminate processes. 
 - The <code> kill</code> command sends signals. Signals are one of several ways that a OS communicates with programs. Ctrl-C and Ctrl-Z are signals. 
-- The default signal is TERM which means to terminate. 
+- The default signal is <code>TERM</code> which means to terminate. 
 
     ``` bash
     ## below is part of a list of signals, retrieved using man 7 signal 
