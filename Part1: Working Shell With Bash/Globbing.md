@@ -1,5 +1,5 @@
 # Globbing
- - Wildcard characters can be used to match pattern with strings. <br>
+ - Globbing aka Wildcard. They are characters that can be used to match pattern with strings. <br>
 
     | Wildcard     | Description |
     | --------------  | -------------- |
@@ -19,7 +19,7 @@
     | [:alpha:]       | Matches any alphabetic character   |
     | [:digit:]       | Matches any numeral                |
     | [:lower:]       | Matches any lowercase letter       |
-    | [:upper:]       | Matches any uppercase letter      |
+    | [:upper:]       | Matches any uppercase letter       |
     
    &nbsp; &nbsp; **Table 1.2** - Character Classes and their meaning 
 
