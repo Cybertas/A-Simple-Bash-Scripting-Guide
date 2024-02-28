@@ -23,6 +23,7 @@
 - Often commands accept flags or options, which modifies or provides additional features of the original command. 
 - Below is a snippet of command (ls) with additional flag (-l).
 - Lists all the files in the working directory with outputing the result as list format. 
+
     ```bash
     dev@dev: ls -l
 
