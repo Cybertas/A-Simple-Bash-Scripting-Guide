@@ -9,7 +9,7 @@
     this is a line with big space
     ```
 
-## Single Quotes 
+### Single Quotes 
 - Anything that is place with the single quotes will lose their properties.
 
     ```bash
@@ -20,7 +20,7 @@
     this is a line with big               space
     ```
 
-## Double Quotes 
+### Double Quotes 
 - Most special characters used by the shell will lose their properties and are treated as ordinary characters
 - With exception of ($), (\), (`)
 
@@ -32,7 +32,7 @@
     Desktop Documents Downloads ...
     ```
 
-## Escaping Characters
+### Escaping Characters
 - To unquote a special character use the (\) 
     ```bash
     dev@dev: echo "this is \$100.00"
