@@ -10,12 +10,12 @@
 - The <code>passwd</code> command can be used to change password.
 - The <code>usermod</code> command can be used to modify a user account.
 - Examples on user administration in Linux.
-    - [List Users](./User%20Admin%20Examples.md#list-users)
-    - [Create Users](./User%20Admin%20Examples.md#create-users)
-    - [Update Password](./User%20Admin%20Examples.md#set-password) 
-    - [Delete Users](./User%20Admin%20Examples.md#delete-users) 
-    - [Switch Users](./User%20Admin%20Examples.md#switch-users)
-    - [Update Users](./User%20Admin%20Examples.md#update-users)
+    - [List Users](./_User%20Admin%20Examples.md#list-users)
+    - [Create Users](./_User%20Admin%20Examples.md#create-users)
+    - [Update Password](./_User%20Admin%20Examples.md#set-password) 
+    - [Delete Users](./_User%20Admin%20Examples.md#delete-users) 
+    - [Switch Users](./_User%20Admin%20Examples.md#switch-users)
+    - [Update Users](./_User%20Admin%20Examples.md#update-users)
 
 ## Group Administration
 - The <code>groupadd</code> command can be used to created new group.
@@ -23,8 +23,8 @@
 - The <code>usermod</code> command can be used to update users in a group.
 - The <code>groupmod</code> command can be used to modify information of a group.
 - Examples on group administration in Linux.
-    - [List Group](./Group%20Admin%20Examples.md#list-groups)
-    - [Create Groups](./Group%20Admin%20Examples.md#create-groups)
-    - [Update Groups Information](./Group%20Admin%20Examples.md#update-group-information)
-    - [Update Groups Users](./Group%20Admin%20Examples.md#update-group-users)
-    - [Delete Groups](./Group%20Admin%20Examples.md#delete-groups)
+    - [List Group](./_Group%20Admin%20Examples.md#list-groups)
+    - [Create Groups](./_Group%20Admin%20Examples.md#create-groups)
+    - [Update Groups Information](./_Group%20Admin%20Examples.md#update-group-information)
+    - [Update Groups Users](./_Group%20Admin%20Examples.md#update-group-users)
+    - [Delete Groups](./_Group%20Admin%20Examples.md#delete-groups)
