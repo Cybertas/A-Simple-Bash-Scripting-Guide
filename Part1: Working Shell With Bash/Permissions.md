@@ -1,4 +1,10 @@
 add navigation table
+add 
+setuid: a bit that makes an executable run with the privileges of the owner of the file
+
+setgid: a bit that makes an executable run with the privileges of the group of the file
+
+sticky bit: a bit set on directories that allows only the owner or root can delete files and subdirectories
 
 # Permissions 
 - Linux has the capability to provide access to multiple users. Thus permissions are essential for security and access control.  
