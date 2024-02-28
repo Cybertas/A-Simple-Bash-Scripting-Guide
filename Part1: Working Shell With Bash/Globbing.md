@@ -1,5 +1,5 @@
 # Globbing
- - Globbing aka Wildcard. They are characters that can be used to match pattern with strings. <br>
+ - Globbing aka Wildcard. They are characters that can be used to match pattern with filenames. <br>
 
     | Wildcard     | Description |
     | --------------  | -------------- |
