@@ -33,8 +33,7 @@
 
 
 ## Tilde Expansion
-- Tilde (~) represents your home directory in bash shell
-- Some use cases below: 
+- Tilde (~) represents your home directory in bash shell.
 
   ```bash
   ##change directly to your home directory 
@@ -60,8 +59,9 @@
   ```
 
 ## Arithmetic Expansion
-- Numerical calculations using bash  
+- Numerical calculations using bash.
   - $(&nbsp;(&nbsp;expression&nbsp;)&nbsp;) &nbsp; 
+
   ```bash
     ## Addition - (+) 
     dev@dev: echo $((12+42))       ## output: 54
@@ -83,10 +83,11 @@
   ```
 
 ## Brace Expansion
-- Manipulating strings and names using pattern
+- Manipulating strings and names using pattern.
   - {&nbsp; expression &nbsp;}
   - Patterns to be expanded may contain a prefix and suffix called preamble and postscript. 
   - The brace expression itself may contain either a comma-separated list of strings or a range of integers of single characters. 
+
   ```bash
   ##Create 5 files from 1 to 5
   dev@dev: touch file{1..5} && ls
@@ -100,8 +101,9 @@
   ```
 
 ## Parameter Expansion
-- Variables substitution in bash 
-  - (&nbsp;$&nbsp;) - references the value of a variable 
+- Variables substitution in bash. 
+  - (&nbsp;$&nbsp;) - references the value of a variable.
+
   ```bash
   dev@dev: echo $PWD
   /home/dev
