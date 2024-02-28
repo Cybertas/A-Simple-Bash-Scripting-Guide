@@ -1,14 +1,12 @@
-add navigation table
-add 
-setuid: a bit that makes an executable run with the privileges of the owner of the file
-
-setgid: a bit that makes an executable run with the privileges of the group of the file
-
-sticky bit: a bit set on directories that allows only the owner or root can delete files and subdirectories
-
 # Permissions 
 - Linux has the capability to provide access to multiple users. Thus permissions are essential for security and access control.  
 - Permissions represent the access rights granted to users, groups and other entities for files and directories. 
+- Overview:
+    - [Permission Types & Identities](#permission-types--identities)
+    - [Modify Permissions - Change File Permission](#modify-permissions---change-file-permission)
+    - [Modifying Identifies - Change Owner and Group](#modifying-identifies---change-owner-and-group)
+    - [Modifying Identities - Change Group Ownership](#modifying-identities---change-group-ownership)
+    - [Other Permission Concepts](#other-permission-concepts)
 
 ## Permission Types & Identities
 - There are three types of permissions: 
@@ -47,7 +45,7 @@ sticky bit: a bit set on directories that allows only the owner or root can dele
     ## file1 has group2 as group
     ```
     
-## Modify Permissions - Change File Mode
+## Modify Permissions - Change File Permission
 - The <code>chmod</code> command can be used to modify the permission for each category. 
 - There are two modes that can be used to set permissions.
     1. Symbolic Mode
@@ -148,3 +146,7 @@ sticky bit: a bit set on directories that allows only the owner or root can dele
         drwxr-xr-x  2 dev group1 4096 Dec  7 07:39 dir1
         -rw-rw-r--  1 dev test_group 4096 Feb 27 16:45 file1
     ```
+## Other Permission Concepts
+ - setuid
+ - setgid
+ - sticky bit
