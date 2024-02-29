@@ -17,16 +17,16 @@
     3. &nbsp; [...] &nbsp; - &nbsp; Matches any one of the enclosed characters.  
       <br />
     ```bash
-    ##trying to match everything in the working directory with * character
+    ## trying to match everything in the working directory with * character
     dev@dev: ls * 
     Desktop Documents Downloads ...
 
 
-    ##create a file called '1' and match it with ? character
+    ## create a file called '1' and match it with ? character
     dev@dev: touch 1 && echo ? 
     1 
 
-    ##create files 1 123 a and match with case [123a]
+    ## create files 1 123 a and match with case [123a]
     dev@dev: touch 1 123 a && echo [123a]
     1 a
     ```
@@ -36,22 +36,22 @@
 - Tilde (~) represents your home directory in bash shell.
 
   ```bash
-  ##change directly to your home directory 
+  ## change directly to your home directory 
   dev@dev: cd ~ && pwd
   /home/dev
 
-  ##set your home directory to another directory 
+  ## set your home directory to another directory 
   dev@dev: HOME=/home/dev/Desktop
   dev@dev: echo ~
   /home/dev/Desktop
 
-  ##checking previous directory 
+  ## checking previous directory 
   dev@dev: pwd; cd ..
   /home/dev/Desktop
   dev@dev: echo ~-
   /home/dev/Desktop
 
-  ##checking current directory 
+  ## checking current directory 
   dev@dev: pwd
   /home/dev
   dev@dev: echo ~+
@@ -89,7 +89,7 @@
   - The brace expression itself may contain either a comma-separated list of strings or a range of integers of single characters. 
 
   ```bash
-  ##Create 5 files from 1 to 5
+  ## create 5 files from 1 to 5
   dev@dev: touch file{1..5} && ls
   file1 file2 file3 file4 file5 something.txt
 
