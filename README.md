@@ -25,11 +25,11 @@ A simple guide to Bash scripting.
     - **Part 1: Working with Shell** 
         - Part 1 provides information on  Bash Shell usage, how to interact with OS over CLI (Command Line Interface).
         - e.g. Basic commands, Permissions, Processes...
-        - Start here - **Insert README.md for Part1**
+        - Start here - **[Part1: README](./Part1:%20Working%20Shell%20With%20Bash/README.md)**
     - **Part 2: Bash Scripting**
         - Part 2 provides information on how to scripting using Bash.
         - e.g. Loops, Functions, Positional Parameters...
-        - Start here - **Insert README.md for Part2**
+        - Start here - **[Part2: README](./Part2:%20Bash%20Scripting/README.md)**
 
 ## Prerequisites 
 - A Bash Shell, which comes by default on many Linux Distros.
