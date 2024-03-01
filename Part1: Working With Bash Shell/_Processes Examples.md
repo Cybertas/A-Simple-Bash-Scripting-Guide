@@ -7,13 +7,11 @@
 dev@dev: python3 -m http.server 
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
-## command can be launched in the background 
+## command can be launched directly in the background 
 dev@dev: python3 -m http.server & 
 [1] 10753
 dev@dev: Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
-dev@dev: echo "Hello" 
-Hello 
 
 ## set command to run in background 
 ## enter ctrl+Z to suspend the process 
