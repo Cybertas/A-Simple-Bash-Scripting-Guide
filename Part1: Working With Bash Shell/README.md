@@ -1,18 +1,18 @@
-1. Commands 
-2. Processes
-3. The environment 
-4. Users & groups
-5. Permissions 
-6. Quoating 
-7. Globbing 
-8. Expansions
-9. Regex
-10. Redirection
-11. Symbolic & Hardlinks
-12. Archive & Compression
+# Recommended Reading Order
+- For people what are interested in learning about Bash, follow the recommended reading list below: 
 
-# To Do 
-- Change the symbols and commands with code tag 
-- Finish the Other Permission Concepts in Permissions.md
-- Finish Files and Directories.md
-- Finish Archive and Compression.md
+    1. [Commands](./Commands.md) 
+    2. [Processes](./Processes.md)
+    3. [Files and Directories](./Files%20and%20Directories.md)
+    4. [Globbing](./Globbing.md) 
+    5. [Users & Groups](./Users%20&%20Groups.md)
+    6. [Permissions](./Permissions.md)
+    7. [The Environment](./The%20Environment.md) 
+    8. [Quoting](./Quoting.md)
+    9. [Expansions](./Expansion.md)
+    10. [Redirection](./Redirection.md)
+    11. [Regular Expression](./Regular%20Expressions.md)
+    12. [Archive & Compression](./Archive%20&%20Compression.md)
+
+## To Do 
+- Clean up
