@@ -1,6 +1,5 @@
-# Learn Bash Scripting 
-![img](./utilities-terminal.svg) <br>
-A simple guide to Bash scripting.
+# Learn Bash Scripting
+![img_icon:utilities terminal by Iconduck,used under GNU General Public License v3.0 (GPL-3.0)](./img/utilities-terminal.svg)  
 
 ## Table of Contents
 
@@ -47,3 +46,4 @@ This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDe
 ## Author
 - LinkedIn: [Yu Hao](https://www.linkedin.com/in/yuhao-/)
 - Personal Remark: This guide is summarized based on study notes for SC103 exam and it is used as a personal reference. 
+
