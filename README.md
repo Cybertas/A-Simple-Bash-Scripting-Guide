@@ -13,7 +13,7 @@ A simple guide to Bash scripting.
 
 ## Important Note
 1. Firstly, I would like to give a shout out to "The Linux Command Line" by William Shotts. Majority of this guide is summarized from "The Linux Command Line." To learn more about Bash, recommend checking out [The Linux Command Line](https://linuxcommand.org/tlcl.php).
-2. Practice is an indispensable part of mastering any skill. To use Bash comfortably and efficiently, I recommend practicing while learning.
+2. Practice is an indispensable part of mastering any skill. To use Bash efficiently, I recommend practicing along.
 
 ## What is Bash?
 - Bash, short for "Bourne Again SHell," is a command-line shell and scripting language.
