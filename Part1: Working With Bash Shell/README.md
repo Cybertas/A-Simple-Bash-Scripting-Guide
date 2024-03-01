@@ -1,5 +1,5 @@
 # Recommended Reading Order
-- For people what are interested in learning about Bash, follow the recommended reading list below: 
+- For people who are interested in learning Bash, follow the recommended reading list below: 
 
     1. [Commands](./Commands.md) 
     2. [Processes](./Processes.md)
