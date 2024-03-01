@@ -1,13 +1,13 @@
 # Shell Expansion 
-- When shell receives a command, bash performs several processes upon the input before it carries out of the command.
+- When shell receives a command, Bash will process the input first before it carries out of the command.
 - With expansion, when we type something and it is expanded into something else before the shell acts upon it.
 
 - Below is the list of expansions:
     - [Pathname Expansion](#pathname-expansion)
     - [Tilde Expansion](#tilde-expansion)
+    - [Parameter Expansion](#parameter-expansion)
     - [Arithmetic Expansion](#arithmetic-expansion)
     - [Brace Expansion](#brace-expansion)
-    - [Parameter Expansion](#parameter-expansion)
     - [Command Substitution](#command-substitution)
 
 ## Pathname Expansion
@@ -45,17 +45,29 @@
   dev@dev: echo ~
   /home/dev/Desktop
 
-  ## checking previous directory 
+  ## get previous directory 
   dev@dev: pwd; cd ..
   /home/dev/Desktop
   dev@dev: echo ~-
   /home/dev/Desktop
 
-  ## checking current directory 
+  ## get current directory 
   dev@dev: pwd
   /home/dev
   dev@dev: echo ~+
   /home/dev
+  ```
+
+## Parameter Expansion
+- Variables substitution in bash. 
+  - (&nbsp;$&nbsp;) - references the value of a variable.
+
+  ```bash
+  dev@dev: echo $PWD
+  /home/dev
+
+  dev@dev: var="Hello World!
+  dev@dev: echo $var
   ```
 
 ## Arithmetic Expansion
@@ -98,18 +110,6 @@
 
   dev@dev: touch prefix-{X,Y,Z}-suffix.txt
   prefix-X-suffix.txt prefix-Y-suffix.txt prefix-Z-suffix.txt
-  ```
-
-## Parameter Expansion
-- Variables substitution in bash. 
-  - (&nbsp;$&nbsp;) - references the value of a variable.
-
-  ```bash
-  dev@dev: echo $PWD
-  /home/dev
-
-  dev@dev: var="Hello World!
-  dev@dev: echo $var
   ```
 
 ## Command Substitution
