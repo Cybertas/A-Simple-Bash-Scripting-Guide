@@ -1,4 +1,5 @@
 # Learn Bash Scripting 
+![img](./utilities-terminal.svg) <br>
 A simple guide to Bash scripting.
 
 ## Table of Contents
