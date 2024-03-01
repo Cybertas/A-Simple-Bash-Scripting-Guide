@@ -147,6 +147,56 @@
         -rw-rw-r--  1 dev test_group 4096 Feb 27 16:45 file1
     ```
 ## Other Permission Concepts
- - setuid
- - setgid
- - sticky bit
+ - setuid(set user ID): A permission bit that can be assigned to executable files in Linux. When an executable file has setuid bit set, it allows users to run the program with permission of the file's owner. 
+    
+    ```bash
+    ## the passwd command has the setuid bit set so regular users can change their passwords without needing root privileges.
+    dev@dev: ls -l /usr/bin/passwd
+    -rwsr-xr-x 1 root root 59976 Feb  6 23:54 /usr/bin/passwd
+    ```
+ - setgid(set group ID): A permission bit allows other users to run the program with the group permission.
+    - The user has to be included in the group first.
+    - Does not allow the owner to run the program with the group permission.
+    
+    ```bash
+    
+    ## test using a bash file
+    ## creating a file with user called dev
+    dev@dev: echo 'echo "testing" >> ./test.sh' > test.sh
+    
+    ## view permission
+    ## login to user test_user
+    test_user@dev: whoami
+    test_user
+    test_user@dev: ls -l
+    -rwxrwxr-x 1 dev       test_group           8 Mar  1 10:52 test.sh
+
+    ## run test.sh, permission denied error as expected 
+    test_user@dev: ./test.sh
+    ./test.sh: line 1: ./test.sh: Permission denied
+
+    ## add setgid bit which then allows other user to have the group permission
+    ## the user must have the group owner membership
+    dev@dev: whoami 
+    dev
+    dev@dev: chmod g+s ./test.sh; ls -l
+    -rwxrwsr-x 1 dev       test_group          28 Mar  1 10:54 test.sh
+
+    ## run script again as test_user
+    ## allows user to write to the script 
+    test_user@dev: ./test.sh 2> /dev/null && cat ./test.sh
+    testing    
+    ```
+ - Sticky Bit
+    - Sticky Bit restricts the ability to delete or rename files within that directory to the file's owner, the directory's owner or the root user regardless of the file's individual permissions.
+
+    ```bash
+    ## view directory permission
+    dev@dev: ls -ld /shared
+    drwxrwxrwx 2 dev       test_group 4096 Feb 27 18:10 shared
+
+    ## add sticky bit
+    dev@dev: chmod +t shared; ls -l
+    
+    drwxrwxrwt 2 dev       dev        4096 Mar  1 12:46 shared
+    ```
