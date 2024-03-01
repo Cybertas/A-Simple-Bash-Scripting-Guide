@@ -1,19 +1,19 @@
 # Commands - What are they?
-- Commands can be:
+- Commands can take several forms:
     - An executable program
     - A built-in command to the shell
     - A shell function
     - An alias of a command
-- A command provides instructions to the underlying system to carry out.
-- Bash acts as an interface between a user and the operating system, whereby a user evokes commands in Bash to interact with the underlying operating system. 
+- A command provides instructions to the underlying system to carry out specific tasks.
+- Bash acts as an interface between a user and the operating system, allowing users to interact with the underlying system by executing commands in Bash.
 
 
 ## Options
-- Often commands accept flags or options, which modifies or provides additional features of the original command. 
-- Use the <code>ls</code> command as an example, the <code>ls</code> command lists contents of the current directory by default. 
-- In addition, the <code>ls</code> command accepts options which provides additional capabilities.
-- To list all the options of a command use the <code>man</code> command.
-- Below is a snippet of the <code>ls</code> command with additional flags.
+- Commands often accept flags or options, which modify or provide additional features to the original command.
+- Let's take the <code>ls</code> command as an example: by default, it lists the contents of the current directory.
+- Additionally, the <code>ls</code> command accepts options that provide additional capabilities.
+- To view all the options available for a command, use the <code>man</code> command.
+- Below is a snippet of the <code>ls</code> command with additional flags:
 
     ```bash
     ## output directory contents in list format
@@ -28,7 +28,7 @@
     ```
 
 ## The "Get Help" Commands
-- The "Get Help" commands are helpful when you want to have a quick look at a command or you want to discern the specific of what a command can do.
+- The "Get Help" commands are useful when you want to quickly learn about a command or understand its specific functionalities.
 - <code>type</code>  
     - The 'type' command provides information on a name and how it is interpreted in the shell. 
     - It is able to distinguish alias, built-in command, external command, shell function, hashed command or a reserved word. 
@@ -44,9 +44,8 @@
     do is a shell keyword
     ```
 - <code>man</code> 
-    - The 'man' command display the manual pages for various commands.
-    - The manual pages provide detailed information about the usage, options and behavior. 
-    - The 'man' does not display built-in commands directly however you can check under the Bash manual page for built-in commands. 
+    - The <code>man</code> command displays manual pages for various commands, providing detailed information about their usage, options, and behavior.
+     - While <code>man</code> does not directly display built-in commands, you can check under the Bash manual page for information on built-in commands.
 
     ```bash
     dev@dev: man ssh
@@ -55,8 +54,8 @@
     ...
     ```
 - <code>help</code> 
-    - The 'help' command provides information about built-in commands.
-    - Can use 'type' to find out which type a command is if it is built-in commands then use 'help' to find more.
+    - The <code>help</code> command provides information about built-in shell commands. It is particularly useful for understanding the functionality of built-in commands.
+    - You can use the <code>type</code> command to determine if a command is a built-in command and then use <code>help</code> to learn more about it.
 
     ``` bash
     dev@dev: help cd
