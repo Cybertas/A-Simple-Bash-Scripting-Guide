@@ -13,6 +13,3 @@
     10. [Redirection](./Redirection.md)
     11. [Regular Expression](./Regular%20Expressions.md)
     12. [Archive & Compression](./Archive%20&%20Compression.md)
-
-## To Do 
-- Clean up
