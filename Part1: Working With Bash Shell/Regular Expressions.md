@@ -1,7 +1,3 @@
-** Need a navigation table, large file
-** practice website - https://regexr.com/
-
-
 # Regular Expression (Regex)
  - Regular expressions are symbolic notations used to identify patterns in text. 
  - Regular expressions are supported by many command line tools and most programming languages for text manipulation purposes.
@@ -67,49 +63,9 @@
     
     &nbsp; &nbsp; **Table 3.2** - Regex Character Classes 
 
-## Regex Examples 
- - Using the TEST file in test_dir for Regex practice. 
-    ```bash
-    dev@dev: cat TEST
-    apple
-    pear
-    orange 
-    pineapple
-    watermelon
-    banana
-    car
-
-    ## Dot, where \b set the boundary of word matches three characters exactly
-    dev@dev: grep '\b.a.\b' TEST
-    car
-
-    ## Anchors 
-    dev@dev: grep '^apple' TEST
-    apple
-
-    dev@dev: grep 'apple$' TEST ## find word apple where it occurs at the end of the line
-    apple
-    pineapple 
-
-    ## Bracket Expressions
-    dev@dev: grep '[abc]a' TEST
-    banana
-    car
-
-    dev@dev: grep '[^abc]a' TEST ## negation, first character in bracket expression is ^
-    pear
-    orange 
-    pineapple
-    watermelon
-    banana
-
-    ## Character Classes
-    dev@dev: grep '^[[:upper:]]*$' TEST ## find string with all uppercase
-    PEACH
-    LEMON
-
-    ## Quantifiers
-    dev@dev: grep -E '\b[a-z]{3}\b' TEST ## -E enables extended regular expression, allows the use of quantifiers 
-    car
-
-    ```
+## Regex Examples
+ - Great website to practice Regular Expression - 
+    [Regexr](https://regexr.com/)
+ - Example on using Regular Expression
+    - [Regular Expression Examples](./_Regular%20Expression%20Examples.md)
+    
