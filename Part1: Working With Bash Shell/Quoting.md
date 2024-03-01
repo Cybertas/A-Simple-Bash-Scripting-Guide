@@ -1,10 +1,13 @@
-# Quoting 
+# Quoting - Way to Control Expansions
 - Bash shell will expand certain keywords or characters thus quoting will prevent unwanted expansions 
     
     ```bash
+    ## unwanted expansion
+    ## Bash performed parameter expansion on $100
     dev@dev: echo here is $100.00
     this is .00
 
+    ## Bash has removed the white spaces between strings
     dev@dev: echo this is a line with big               space
     this is a line with big space
     ```
