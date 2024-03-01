@@ -35,7 +35,7 @@ dev@dev: sudo groupmod -g 1005 group_new
 ```bash
 ## add new user to group
 ## where -a is to append user to -g group specified
-dev@dev: sudo usermod -a -G dev group_new
+dev@dev: sudo usermod -a -G group_new dev
 
 ## remove user from group
 dev@dev: sudo deluser dev group_new
