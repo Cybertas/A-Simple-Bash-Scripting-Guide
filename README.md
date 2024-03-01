@@ -44,6 +44,5 @@ A simple guide to Bash scripting.
 This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported license](https://creativecommons.org/licenses/by-nc-nd/3.0/). See the [LICENSE.md](LICENSE.md) file for details.
 
 ## Author
-- Yu(Chris) Hao
 - LinkedIn: [Yu Hao](https://www.linkedin.com/in/yuhao-/)
-- Personal Remark: guide is summarized based on study notes for SC103 exam and it is used as personal reference. 
+- Personal Remark: This guide is summarized based on study notes for SC103 exam and it is used as a personal reference. 
