@@ -1,4 +1,4 @@
-# Redirection
+# Redirection & Pipeline
 - Shell has the ability to redirect input and output of commands to and from files, as well as connect multiple commands together into command pipelines. 
 - Standard streams consists of standard input, output and error, they are the communication channels between a program and it's environment. 
     - Standard input **(stdin)**: A stream which a program read input. By default, it is connected to the keyboard, but it can be redirected to read from files or other sources.
@@ -6,7 +6,7 @@
     - Standard Error **(stderr)**: A stream which a program write its error messages and diagnostic output. By default, it is connected to the terminal but can be redirected separately from stdout.
 
 ## Redirecting Standard Output 
-- Redirection allows us to redefine where standard output goes. To redirect standard output to a file instead of the screen, use <code> > </code> redirection operator followed by the name of the file. 
+- Redirection allows us to redefine where standard output goes. To redirect standard output to a file instead of the screen, use <code> ></code> redirection operator followed by the name of the file. 
     ```bash
     ## output to default stdout stream, to terminal 
     dev@dev: cat TEST 
@@ -53,7 +53,7 @@
     ```
 
 ## Redirecting Standard Input 
-- <code>cat</code> accepts standard input with <code><</code> operator. With <code> < </code> operator it is possible to change the standard input from the keyboard to a file. 
+- <code>cat</code> accepts standard input with <code><</code> operator. With <code> <</code> operator it is possible to change the standard input from the keyboard to a file. 
 
     ```bash
     dev@dev: cat < TEST 
