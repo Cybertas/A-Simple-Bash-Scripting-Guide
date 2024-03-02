@@ -18,18 +18,17 @@
     3. &nbsp; [...] &nbsp; - &nbsp; Matches any one of the enclosed characters.  
       <br />
     ```bash
-    ## trying to match everything in the working directory with * character
+    ## match everything in the working directory with * character
     dev@dev: ls * 
     Desktop Documents Downloads ...
 
-
-    ## create a file called '1' and match it with ? character
-    dev@dev: touch 1 && echo ? 
-    1 
+    ## create a file '1' and match it with ? character
+    dev@dev: touch 1.txt && echo ?.txt
+    1.txt
 
     ## create files 1 123 a and match with case [123a]
-    dev@dev: touch 1 123 a && echo [123a]
-    1 a
+    dev@dev: touch 1.txt 123.txt a.txt && echo [123a].txt
+    1.txt a.txt
     ```
 
 
