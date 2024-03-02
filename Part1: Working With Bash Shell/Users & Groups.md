@@ -1,12 +1,12 @@
 # Users and Groups
-- In Linux, users refers to individuals who interact with the system by logging in, executing commands, accessing files and performing various tasks.
-- Under a shared compute environment multi-users allows granular access control, resource sharing, environment customization and much more. 
+- In Linux, users refer to individuals who interact with the system by logging in, executing commands, accessing files, and performing various tasks.
+- In a shared computing environment, multi-users allow granular access control, resource sharing, environment customization, and much more. 
 - Each user account on a Linux system is associated with a unique username and user ID, which is used to identify and differentiate each user. 
-- Users can belong to one ore more user groups, which provide a easier way to organize users and access control.
+- Users can belong to one or more user groups, which provide an easier way to organize users and access control.
 
 ## User Administration 
 - The <code>useradd</code> command can be used to created new user.
-    - By default, <code>useradd</code> does not set the password for the new user. To set a password use <code>passwd</code> command.
+    - By default, <code>useradd</code> does not set the password for the new user. To set a password, use the <code>passwd</code> command.
 - The <code>userdel</code> command can be used to delete users. 
 - The <code>passwd</code> command can be used to change password.
 - The <code>usermod</code> command can be used to modify a user account.

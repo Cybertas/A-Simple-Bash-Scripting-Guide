@@ -1,6 +1,5 @@
-Need to link to Globbing for filename matching
 # Files and Directories 
-- In Linux, files are organized in a hierarchical directory structure. Linux is a single file system tree where the structure starts from the root directory and branch downwards. 
+- In Linux, files are organized in a hierarchical directory structure, forming a single file system tree starting from the root directory and branching downwards.
 
      ```bash
     ## use df command to examine the filesystem structure
@@ -15,21 +14,20 @@ Need to link to Globbing for filename matching
     ...
     ```
 ## Directory Navigation
-- The current directory is called the working directory. 
-- Use <code>pwd</code> to display the working directory. 
-- Use <code>cd</code> to change directory. 
-- There are two methods to refer to a directory 
-    1. **Absolute Pathnames**: An absolute pathname begins with the root directory and follows the tree branch by branch until the path to the desired directory or file is completed.
-    2. **Relative Pathnames**: uses special notions to navigate. </br>
-    The "." notion refers to the working directory.
-    The ".." notion refers to the parent directory of the working directory. 
+- The current directory is called the working directory.
+- Use <code>pwd</code> to display the working directory.
+- Use <code>cd</code> to change directory.
+- There are two methods to refer to a directory:
+    1. **Absolute Pathnames**: Begin with the root directory and follow the tree until the desired directory or file is reached.
+    2. **Relative Pathnames**: Utilize special notions to navigate.
+        - The "." notion refers to the working directory.
+        - The ".." notion refers to the parent directory of the working directory.
     ```bash
     ## pwd shows that we are in the home directory of user dev
     dev@dev: pwd
     /home/dev
 
     ## absolute pathname navigation
-    ## navigating to the Downloads directory where the Downloads directory is the child of dev directory
     dev@dev: cd /home/dev/Downloads
 
     ## relative pathname navigation
