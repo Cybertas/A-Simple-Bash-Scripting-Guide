@@ -7,7 +7,7 @@
 - [What is Bash?](#what-is-bash)
 - [Guide Breakdown](#guide-breakdown)
 - [Prerequisites](#prerequisites)
-- [Resources](#resources)
+- [Resources](#learning-resources)
 - [License](#license)
 - [Author](#author)
 
