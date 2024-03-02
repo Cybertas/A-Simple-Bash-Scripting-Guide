@@ -1,5 +1,5 @@
 # Quoting - Way to Control Expansions
-- Bash shell will expand certain keywords or characters thus quoting will prevent unwanted expansions 
+- Bash shell will expand certain keywords or characters thus quoting will prevent unwanted expansions. 
     
     ```bash
     ## unwanted expansion
