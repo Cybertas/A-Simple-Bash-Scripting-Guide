@@ -34,6 +34,7 @@
     - It is able to distinguish alias, built-in command, external command, shell function, hashed command or a reserved word. 
 
     ```bash
+    ## output from the type command
     dev@dev: type cd
     cd is a shell builtin
 
@@ -48,6 +49,7 @@
      - While <code>man</code> does not directly display built-in commands, you can check under the Bash manual page for information on built-in commands.
 
     ```bash
+    ## output from the man command
     dev@dev: man ssh
     NAME
      ssh — OpenSSH remote login client
@@ -58,6 +60,7 @@
     - You can use the <code>type</code> command to determine if a command is a built-in command and then use <code>help</code> to learn more about it.
 
     ``` bash
+    ## output from the help command
     dev@dev: help cd
     cd: cd [-L|[-P [-e]] [-@]] [dir]
     Change the shell working directory.
