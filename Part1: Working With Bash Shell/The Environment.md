@@ -1,9 +1,16 @@
 # The Shell Environment 
-- The shell keeps track of information during a shell session called environment.
+
+- The shell keeps track of information during a shell session called the environment.
 - Programs use data stored in the environment to determine the system's configurations. 
+
+## Types of Shell Environment Data
+
+
 - Shell stores two basic types of data in the environment.<br>
-    - Environment variables: Environment variables are used to pass information between processes or to configure the behavior of programs.  They are accessible to all processes that are spawned from the shell.
-    - Shell variables: Shell variables are used to store temporary data within a shell script or session. They are not visible to external programs or other shell instances. 
+
+    1. Environment variables: Used to pass information between processes or configure the behavior of programs. Accessible to all processes spawned from the shell.
+    2. Shell variables: Used to store temporary data within a shell script or session. Not visible to external programs or other shell instances. 
+
 
     ```bash
         ## shell variables 
@@ -15,10 +22,12 @@
         dev@dev: HOME=/dev/home/bin ## changing the home directory 
     ```
 
-## How is the Shell Environment Established
- - When bash starts on boot it reads a series of configuration script files called startup files, which defines the default environment shared by all users. This is followed by more startup files in the user home directory which defines the user personal environment. 
- - The exact sequence depends on the type of shell session being started. 
- - Below are two kinds of sessions:
+## Establishing the Shell Environment
+
+- When bash starts, it reads a series of configuration script files called startup files, defining the default environment shared by all users.
+- The sequence of startup files depends on the type of shell session being started: non-login or login shell session.
+
+ - Below are two types of sessions:
     - A non-login shell session: A shell session via terminal emulator. 
     - A login shell session: A shell that prompts for username and password i.e. SSH session. 
     
@@ -46,13 +55,14 @@
     
 
 ## Update the Startup Files
-- As a general rule, to add directories to PATH environment variable or define additional environment variables, place changes in <code>.bash_profile</code> or equivalent. For everything else place changes in <code>.bashrc</code>.
-- Below are some examples that can be added to the Startup files to customize the user environment. 
+- To add directories to PATH or define additional environment variables, place changes in <code>.bash_profile</code> or equivalent (depending on the Distro). For other changes, use <code>.bashrc</code>.
+
+- Below is an example on a modified startup file. 
+
     ```bash
     ## in the .bashrc file 
     ## to add additional alias
     alias cl='clear' ## instead of typing clear to clear terminal, type cl
-
 
     ## in terminal 
     dev@dev: source ~/.bashrc ## update the change
@@ -60,13 +70,10 @@
 
 
 ## Interacting with the Shell Environment 
-- <code>set</code>
-    -  The 'set' command prints values for both the shell and environment variables. It also displays any defined shell functions. 
-    - It is a built-in command. 
-- <code>printenv</code>
-    - The 'printenv' command will only show environment variables.
-- <code>alias</code>
-    - The 'alias' command will display all aliases in the environment and allows you to declare new aliases. 
+- <code>set</code>: Prints values for both shell and environment variables, and displays defined shell functions.
+- <code>printenv</code>: Only show environment variables.
+- <code>alias</code>: Displays and allows the declaration of aliases.
+
     ```bash
     ##  a snippet of set command output
     dev@dev: set
