@@ -1,6 +1,6 @@
 # Permissions 
-- Linux has the capability to provide access to multiple users. Thus permissions are essential for security and access control.  
-- Permissions represent the access rights granted to users, groups and other entities for files and directories. 
+- Linux has the capability to provide access to multiple users. Thus permissions are essential for security and access control.   
+- Permissions represent the access rights granted to users, groups, and other entities for files and directories. 
 - Overview:
     - [Permission Types & Identities](#permission-types--identities)
     - [Modify Permissions - Change File Permission](#modify-permissions---change-file-permission)
@@ -10,13 +10,14 @@
 
 ## Permission Types & Identities
 - There are three types of permissions: 
-    1. Read (r): This permission allows the file to be opened and read as well as allows the contents of directories to be listed. 
-    2. Write (w): This permission allows the file to be modified or deleted and allows files within the directory to be created, deleted or renamed.  
-    3. Execute (x): This permission allows the file to be executed. For directories, it allows access and directories within the directory. 
-- There are three different identities which permission can be applied to: 
-    1. Owner (a user): This category represents the user who created the file or directory, or the user who is currently the owner. 
-    2. Group: By default, only one group can be associated with a folder or directory. Permission applied to a group will be applied to all users in that group. 
-    3. Other (everyone else): This category represents all other users who are not the owner or part of the group. 
+    1. Read (r): Allows reading a file's contents or listing a directory's contents.
+    2. Write (w): Allows modifying or deleting a file and creating, deleting, or renaming files within a directory.
+    3. Execute (x): Allows executing a file or accessing files within a directory.
+- Permissions can be applied to three different identities:
+    1. Owner (u): The user who created the file or directory, or the user who is currently the owner.
+    2. Group (g): The group associated with the file or directory.
+    3. Other (o): All other users who are not the owner or part of the group.
+
 - File type strings
     1. "-" indicates a regular file.
     2. "d" indicates a directory.
@@ -45,32 +46,12 @@
     ## file1 has group2 as group
     ```
     
-## Modify Permissions - Change File Permission
-- The <code>chmod</code> command can be used to modify the permission for each category. 
-- There are two modes that can be used to set permissions.
-    1. Symbolic Mode
-        - Symbolic Mode uses letters to set the permissions.
-    
-            | Letter | Description |
-            | --------------- | -------------- |
-            | u               | Represents file or directory owner |
-            | g               | Represents group owner             |
-            | o               | Represent others                   |
-            | a               | Represents all, including u,g,o    |
-
-    2. Numeric Mode 
-        - Numeric Mode uses Octal to set the permissions.
-
-            |   Octal  |      Binary   |  File Mode |
-            |----------| ------------- | ---------- |
-            | 0        |  000          | ---        |
-            | 1        |  001          | --x        |
-            | 2        |  010          | -w-        |
-            | 3        |  011          | -wx        |
-            | 4        |  100          | r--        |
-            | 5        |  101          | r-x        |
-            | 6        |  110          | rw-        |
-            | 7        |  111          | rwx        |
+## Modify Permissions - Change File/Directory Permission
+- The <code>chmod</code> command can be used to modify permissions for each category.
+- There are two modes to set permissions: Symbolic Mode and Numeric Mode.
+    - Symbolic Mode: Uses letters to set permissions (e.g., `u+x`).
+    - Numeric Mode: Uses octal to set permissions (e.g., `chmod 777 file1`).
+    - [Permission Mode Table](./_Permissions%20Examples.md)
 
     ```bash
     ## list contents in a directory 
@@ -106,8 +87,8 @@
     dev@dev: chmod 764 file1
     ```
 ## Modifying Identifies - Change Owner and Group
-- The <code>chown</code> command can be used to change the owner and group (optionally) for a file or directory. 
--  Syntax: chown owner_change_to:group_change_to file_name
+- The <code>chmod</code> command changes the owner and optionally the group of a file or directory.
+- Syntax: <code>chown owner:group file_name</code>.
 
     ```bash
     ## list contents in a directory 
@@ -131,72 +112,14 @@
     -rw-rw-r--  1 test_user group2 4096 Feb 27 16:45 file1
     ```
 
-
 ## Modifying Identities - Change Group Ownership 
-- The <code>chgrp</code> command can be used to change the group for folder or directory. 
+- The <code>chgrp</code> command changes the group of a file or directory.
+- [chgrp Examples](./_Permissions%20Examples.md#chgrp-example)
 
-    ```bash
-        ## list contents in a directory 
-        dev@dev: ls -l
-        drwxr-xr-x  2 dev group1 4096 Dec  7 07:39 dir1
-        -rw-rw-r--  1 dev group2 4096 Feb 27 16:45 file1
-
-        ## change group ownership to test_group for file1 
-        dev@dev: sudo chgrp test_group file1; ls -l
-        drwxr-xr-x  2 dev group1 4096 Dec  7 07:39 dir1
-        -rw-rw-r--  1 dev test_group 4096 Feb 27 16:45 file1
-    ```
 ## Other Permission Concepts
- - setuid(set user ID): A permission bit that can be assigned to executable files in Linux. When an executable file has setuid bit set, it allows users to run the program with permission of the file's owner. 
-    
-    ```bash
-    ## the passwd command has the setuid bit set so regular users can change their passwords without needing root privileges.
-    dev@dev: ls -l /usr/bin/passwd
-    -rwsr-xr-x 1 root root 59976 Feb  6 23:54 /usr/bin/passwd
-    ```
- - setgid(set group ID): A permission bit allows other users to run the program with the group permission.
-    - The user has to be included in the group first.
-    - Does not allow the owner to run the program with the group permission.
-    
-    ```bash
-    
-    ## test using a bash file
-    ## creating a file with user called dev
-    dev@dev: echo 'echo "testing" >> ./test.sh' > test.sh
-    
-    ## view permission
-    ## login to user test_user
-    test_user@dev: whoami
-    test_user
-    test_user@dev: ls -l
-    -rwxrwxr-x 1 dev       test_group           8 Mar  1 10:52 test.sh
-
-    ## run test.sh, permission denied error as expected 
-    test_user@dev: ./test.sh
-    ./test.sh: line 1: ./test.sh: Permission denied
-
-    ## add setgid bit which then allows other user to have the group permission
-    ## the user must have the group owner membership
-    dev@dev: whoami 
-    dev
-    dev@dev: chmod g+s ./test.sh; ls -l
-    -rwxrwsr-x 1 dev       test_group          28 Mar  1 10:54 test.sh
-
-    ## run script again as test_user
-    ## allows user to write to the script 
-    test_user@dev: ./test.sh 2> /dev/null && cat ./test.sh
-    testing    
-    ```
- - Sticky Bit
-    - Sticky Bit restricts the ability to delete or rename files within that directory to the file's owner, the directory's owner or the root user regardless of the file's individual permissions.
-
-    ```bash
-    ## view directory permission
-    dev@dev: ls -ld /shared
-    drwxrwxrwx 2 dev       test_group 4096 Feb 27 18:10 shared
-
-    ## add sticky bit
-    dev@dev: chmod +t shared; ls -l
-    
-    drwxrwxrwt 2 dev       dev        4096 Mar  1 12:46 shared
-    ```
+- **setuid (set user ID)**: Allows users to run a program with the permissions of the file's owner.
+    - [setuid Examples](./_Permissions%20Examples.md#setuid-example)
+ - setgid(set group ID): Allows users to run a program with the group's permission.
+    - [setgid Examples](./_Permissions%20Examples.md#setgid-example)
+ - Sticky Bit: Restricts the ability to delete or rename files within a directory to the file's owner, the directory's owner, or the root user regardless of the file's individual permissions.
+    - [Sticky Bit Examples](./_Permissions%20Examples.md#sticky-bit-example)
