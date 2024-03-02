@@ -1,9 +1,9 @@
 # Redirection & Pipeline
 - The shell has the ability to redirect input and output of commands to and from files, as well as connect multiple commands together into command pipelines.  
 - Standard streams consist of standard input, output, and error, which are the communication channels between a program and its environment. 
-    - Standard input **(stdin)**: A stream which a program reads input. By default, it is connected to the keyboard, but it can be redirected to read from files or other sources.
-    - Standard output **(stdout)**: A stream which a program writes its output. By default, it is connected to the terminal, but similar to stdin, it can be redirected to write to files or other destinations. 
-    - Standard Error **(stderr)**: A stream which a program write its error messages and diagnostic output. By default, it is connected to the terminal but can be redirected separately from stdout.
+    - **Standard input (stdin)**: A stream which a program reads input. By default, it is connected to the keyboard, but it can be redirected to read from files or other sources.
+    - **Standard output (stdout)**: A stream which a program writes its output. By default, it is connected to the terminal, but similar to stdin, it can be redirected to write to files or other destinations. 
+    - **Standard Error (stderr)**: A stream which a program write its error messages and diagnostic output. By default, it is connected to the terminal but can be redirected separately from stdout.
 
 ## Redirecting Standard Output 
 - Redirection allows us to redefine where standard output goes. To redirect standard output to a file instead of the screen, use the <code>></code> redirection operator followed by the name of the file. 
