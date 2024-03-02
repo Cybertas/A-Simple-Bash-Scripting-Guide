@@ -1,11 +1,12 @@
 # Regular Expression (Regex)
- - Regular expressions are symbolic notations used to identify patterns in text. 
- - Regular expressions are supported by many command line tools and most programming languages for text manipulation purposes.
+- Regular expressions are symbolic notations used to identify patterns in text.
+- Regular expressions are supported by many command line tools and most programming languages for text manipulation purposes.
 
 ## Regex using Grep 
-- <code>grep</code> - grep searches text files for input patterns and outputs any matches to the standard output. 
+- <code>grep</code> - The <code>grep</code> command searches text files for input patterns and outputs any matches to the standard output. 
 - Regex can be used for pattern matching with grep.
 - Below are simple use cases: 
+
     ```bash
     dev@dev: cat TEST
     apple
@@ -52,7 +53,7 @@
     | [:upper:]        | The uppercase characters          |
     | [:xdigit:]       | Character used to express hexadecimal numbers, [0-9A-Fa-F]                       |
 
-    &nbsp; &nbsp; **Table 3.2** - Regex Character Classes 
+    &nbsp; &nbsp; **Table 3.2** - Regex MetaCharacters 
 
     | Quantifiers     | Description |
     | --------------- | -------------- |
@@ -61,7 +62,7 @@
     | +               | Match an Element One or More       |
     | {}              | Match an Element a Specific number of Times          |
     
-    &nbsp; &nbsp; **Table 3.2** - Regex Character Classes 
+    &nbsp; &nbsp; **Table 3.3** - Regex Quantifiers
 
 ## Regex Examples
  - Great website to practice Regular Expression - 
