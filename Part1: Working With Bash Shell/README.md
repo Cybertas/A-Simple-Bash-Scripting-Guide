@@ -8,7 +8,7 @@ If you're interested in learning Bash scripting, follow this recommended reading
 2. [Processes](./02.Processes.md)
    - Understand how processes work in a Bash environment.
 
-3. [Files and Directories](./0.3Files%20and%20Directories.md)
+3. [Files and Directories](./03.Files%20and%20Directories.md)
    - Explore file and directory manipulation commands and concepts.
 
 4. [Globbing](./04.Globbing.md) 
