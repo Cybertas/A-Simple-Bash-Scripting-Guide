@@ -1,7 +1,8 @@
 # Shell Expansion 
-- When shell receives a command, Bash will process the input first before it carries out of the command.
-- With expansion, when we type something and it is expanded into something else before the shell acts upon it.
+- When the shell receives a command, Bash processes the input first before carrying out the command.
+- Expansion involves typing something that gets expanded into something else before the shell acts upon it.
 
+## Types of Expansions
 - Below is the list of expansions:
     - [Pathname Expansion](#pathname-expansion)
     - [Tilde Expansion](#tilde-expansion)
@@ -33,7 +34,7 @@
 
 
 ## Tilde Expansion
-- Tilde (~) represents your home directory in bash shell.
+- Tilde (~) represents your home directory in Bash shell.
 
   ```bash
   ## change directly to your home directory 
