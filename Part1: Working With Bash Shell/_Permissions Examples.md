@@ -1,4 +1,5 @@
 ### Permission Mode Table
+----------------------------
 1. Symbolic Mode: Uses letters to set the permissions.
 
     | Letter | Description |
@@ -21,7 +22,7 @@
     | 6        |  110          | rw-        |
     | 7        |  111          | rwx        |
 
-------------------------
+------------------------------------------------------
 
 ### chgrp Example
 ```bash
@@ -42,6 +43,10 @@ drwxr-xr-x  2 dev group1 4096 Dec  7 07:39 dir1
 ## the passwd command has the setuid bit set so regular users can change their passwords without needing root privileges.
 dev@dev: ls -l /usr/bin/passwd
 -rwsr-xr-x 1 root root 59976 Feb  6 23:54 /usr/bin/passwd
+
+
+## man setuid for more info
+dev@dev: man setuid
 ```
 
 
@@ -77,7 +82,11 @@ dev@dev: chmod g+s ./test.sh; ls -l
 ## run script again as test_user
 ## allows user to write to the script 
 test_user@dev: ./test.sh 2> /dev/null && cat ./test.sh
-testing    
+testing 
+
+
+## man setgid for more info
+dev@dev: man setgid
 ```
 
 
