@@ -23,11 +23,11 @@ If you're interested in learning Bash scripting, follow this recommended reading
 7. [The Environment](./The%20Environment.md) 
    - Explore the Bash shell environment and its configuration.
 
-8. [Quoting](./Quoting.md)
-   - Master the quoting mechanisms in Bash for proper command interpretation.
-
-9. [Expansions](./Expansion.md)
+8. [Expansions](./Expansion.md)
    - Learn about different types of expansions and their usage.
+
+9. [Quoting](./Quoting.md)
+   - Master the quoting mechanisms in Bash for proper command interpretation.
 
 10. [Redirection & Pipeline](./Redirection%20&%20Pipeline.md)
     - Understand how to redirect input and output and create command pipelines.
