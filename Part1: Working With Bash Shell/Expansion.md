@@ -114,6 +114,7 @@
 
 ## Command Substitution
 - Allow the use of output of a command as an expansion. 
+
     ```bash
     dev@dev: ls $(cd ~)
     Desktop Downloads Documents ...
