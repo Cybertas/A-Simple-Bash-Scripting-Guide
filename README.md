@@ -35,10 +35,10 @@
 - A Bash Shell, which comes by default on many Linux Distros.
 - To learn Bash on Windows, use Windows Linux Sub-system or Virtual Machines.
 
-## Resources
+## Learning Resources
 - **For Advanced Usage:** [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
 - **Practice Questions:** [BashBlaze: 7 Days of Bash Scripting Challenge](https://github.com/prajwalpd7/BashBlaze-7-Days-of-Bash-Scripting-Challenge)
-- **Coding Questions:** [Bash Coding Track](https://exercism.org/tracks/bash)
+- **Practice Coding Questions:** [Bash Coding Track](https://exercism.org/tracks/bash)
 
 ## License
 This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported license](https://creativecommons.org/licenses/by-nc-nd/3.0/). See the [LICENSE.md](LICENSE.md) file for details.
