@@ -1,6 +1,6 @@
 # Recommended Learning Path for Bash
 
-If you're interested in learning Bash scripting, follow this recommended reading order:
+If you're interested in learning Bash shell, follow this recommended reading order:
 
 1. [Commands](./01.Commands.md) 
    - Learn about basic commands and their usage in Bash.
