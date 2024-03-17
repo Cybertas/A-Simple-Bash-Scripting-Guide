@@ -1,0 +1,117 @@
+# String Manipulation 
+ - The shell provides a variety of features to manipulate strings and numbers. 
+
+ ## Basic Parameters
+ - Parameter expansions are used to retrieve value assigned to a variable. 
+
+    ```bash 
+    ## retrieve value assigned to variable var
+    dev@dev: var="foo"
+    dev@dev: echo $var
+    foo
+
+    ## add braces when expanding in a string
+    dev@dev: echo "$var_file" ## outputs nothing because shell sees $var_file as a new variable 
+    
+    dev@dev: echo "${var}_file"
+    foo_file
+    ```
+
+## Expansions to Manage Empty Variables
+ - Below are parameter expansion that handles nonexistent and empty variables. Handy for handling missing positional parameters and assigning default values to parameters. 
+ - `${parameter:-word}` : If `parameter` is unset or empty, return temporary value of `word`.
+    
+    ```bash
+    dev@dev: echo ${var:-"substitute value if unset"}
+    substitute value if unset
+
+    dev@dev: var=bar
+    dev@dev: echo ${var:-"substitute value if unset"}
+    bar
+    ```
+
+ - `${parameter:=word}` : If `parameter` is unset or empty, set `word` as default value
+
+    ```bash
+    dev@dev:echo ${var:="default value if unset"}
+    default value if unset
+    dev@dev: echo $var
+    default value if unset
+    dev@dev: var=bar
+    dev@dev: echo $var
+    bar
+    ```
+
+ - `${parameter:?word}` : if `parameter` is unset or empty, exist with `word` as error message. 
+
+    ```bash
+    dev@dev: echo ${var:?"parameter is empty"}
+    bash: var: parameter is empty
+    dev@dev: var=bar
+    dev@dev: echo $var
+    bar
+    ```
+
+ - `${parameter:+word}` : if `parameter` is unset or empty do nothing, else over write the value to `word`.
+
+    ```bash
+    dev@dev: echo ${var:+"substitute value if set"}
+
+    dev@dev: var=bar
+    dev@dev: echo ${var:+"substitute value if set"}
+    substitute value if set
+    ```
+
+## String Operations
+ - Below are expansions that can be used to operate on strings. 
+ - `${#parameter}` : gets the string length
+ - `{parameter:offset:length}`: string slicing
+ -  String match and replace: 
+    - `${parameter/pattern/string}` : replace string with `string` on the first occurrence of matched `pattern` .
+    - `${parameter//pattern/string}` : replace string with `string` on all occurrence of matched `pattern` .
+    - `${parameter/#pattern/string}` : replace string with `string` if pattern matched at the beginning of the string. 
+    - `${parameter/%pattern/string}` : replace string with `string` if pattern matched at the end of the string.
+
+    ```bash
+    dev@dev: var=FILE.FILE
+    dev@dev: echo ${var/FILE/file}
+    file.File
+    dev@dev: echo ${var//FILE/file}
+    file.file
+    dev@dev: echo ${var/#FILE/file}
+    file.FILE
+    dev@dev: echo ${var/%FILE/file}
+    FILE.file
+    ```
+
+ ## Case Conversion
+ - Bash provides the ability to perform case conversion using parameter expansions and using `declare` command.
+
+ - Case conversion using parameter expansion
+    - `${parameter,,pattern}` : convert string to lowercase.
+    - `${parameter,pattern}` : convert only the first character of the string to lowercase.
+    - `${parameter^^pattern}` : convert string to uppercase.
+    - `${parameter^pattern}` : convert only the first character of the string to uppercase.
+    
+    ```bash
+    dev@dev: var="ThIs Is A StRiNg"
+    dev@dev: echo ${var,,}
+    this is a string
+    dev@dev: echo ${var,}
+    thIs Is A StRiNg
+    dev@dev: echo ${var^^}
+    THIS IS A STRING
+    dev@dev: echo ${var^}
+    ThIs Is A StRiNg
+    ```
+
+ - Below is example using declare command
+
+    ```bash
+    ## using declare command
+    dev@dev: declare -u upper && declare -l lower
+    dev@dev: upper="AaAaA" && lower="bBbBb"
+    dev@dev: echo $upper && echo $lower
+    AAAAA
+    bbbbb
+    ```

@@ -1,0 +1,119 @@
+# Arrays & Nested Arrays 
+ - In Bash, an array is a variable type that can hold multiple values.
+ - Array allows you to store a collection of data elements under a single variable name. 
+ - Array can be one-dimensional or multi-dimensional(Nested Array).
+
+## Creating an Array
+ -  Two ways to declare an array in Bash. 
+    1. Assign value directly to create the array 
+    2. Use `declare -a` command 
+ - Array in Bash starts with index 0. 
+
+    ```bash
+    ## creating an array by accessing
+    dev@dev: a[0]=foo 
+    dev@dev: echo ${a[0]} ## viewing the content of element on index 0
+    
+    ##creating an array with declare command
+    dev@dev: declare -a array
+    dev@dev: declare -p array ## check the variable type 
+    declare -a array
+    ```
+## Assigning Values to an Array 
+ - Two ways to assign values to an array in Bash. Below are the syntax: 
+    1. arrayName[index]=value
+        - arrayName = name of the array 
+        - index = index of the element which the value is going to be stored
+        - value = value to be stored
+    2. arrayName(value1 value2 ...)
+        - arrayName = name of the array
+        - value = value assigned sequentially to elements of the array.
+
+    ```bash
+    ## assigning values using the first method
+    dev@dev: days=([0]=Mon [1]=Tue [2]=Wed [3]=Thu [4]=Fri [5]=Sat [6]=Sun)
+    
+    ## assigning values using the second method
+    dev@dev: days=(Sun Mon Tue Wed Thu Fri Sat)
+    ```
+
+## Accessing Array Elements
+ - Elements within an array can be access directly using `*` and `@`as index, or using a loop to iterate through the entire array. 
+ - There is no difference in terms of output between `*` and `@`, only when they are quoted which `*` treats the entire array as a single entity and doesn't preserve individual elements where as `@` preserves the individual elements. 
+
+    ```bash
+    ## example array
+    dev@dev: days=([0]=Mon [1]=Tue [2]=Wed [3]=Thu [4]=Fri [5]=Sat [6]=Sun)
+
+    ## display entire array using special index
+    dev@dev: echo ${days[*]}
+    Mon Tue Wed Thu Fri Sat Sun
+    dev@dev: echo ${days[@]}
+    Mon Tue Wed Thu Fri Sat Sun
+
+    ## display array using for loop 
+    dev@dev: for i in "${days[*]}"; do echo $i; done
+    Mon Tue Wed Thu Fri Sat Sun
+
+    dev@dev: for i in "${days[@]}"; do echo $i; done
+    Mon
+    Tue
+    Wed
+    Thu
+    Fri
+    Sat
+    Sun
+
+    ## get the length of the array 
+    dev@dev: echo ${#days[@]} 
+    7
+
+    ## get the length of the element on an index
+    dev@dev: echo ${#days[3]}
+    3
+    ```
+
+## Array Operations 
+ - The `unset` command can be used to remove an element or an array.
+ - Below are some operations on arrays in Bash:
+    - [Append New Element](./_Arrays%20Examples.md#append_new_element)
+    - [Remove Array Element](./_Arrays%20Examples.md#remove_array_element)
+    - [Slicing Array](./_Arrays%20Examples.md#slicing_array)
+    - [Joining Elements in Array](./_Arrays%20Examples.md#joining_elements_in_array)
+    - [Sorting Array elements](./_Arrays%20Examples.md#sorting_array_elements)
+    - [Deleting Array](./_Arrays%20Examples.md#deleting_array)
+
+
+## Nested Arrays
+- Nested arrays are array inside another array, Bash uses strings as array indexes. 
+- Below is an example on declaring an nested array. 
+
+    ```bash 
+    ## using the declare command 
+    dev@dev: declare -A items
+    dev@dev: items["books"]=3
+    dev@dev: items["pens"]=2
+    dev@dev: items["folders"]=6
+
+    ## access an element in the array
+    dev@dev: echo ${items["folders"]}
+    6
+
+    ## iterate over elements 
+    dev@dev: for row in "${items[@]}"; do echo "$row"; done
+    3 
+    2 
+    6
+
+    ## iterate over key and elements 
+    dev@dev: echo "All items and quantities:" for item in "${!items[@]}"; do number="${items[$item]}" echo "$item: $number" done
+    ## output below
+    books: 3
+    pens: 2
+    folders: 6
+
+
+    ## slicing nested array
+    dev@dev: echo ${items[@]:1:2}
+    3 2
+    

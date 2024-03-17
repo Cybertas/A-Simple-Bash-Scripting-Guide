@@ -1,0 +1,81 @@
+# Positional Parameters
+ - Bash shell provides a set of variables called positional parameters that contains arguments via the command line. 
+ - Positional Parameters can be useful when you want to supply input to the script form the command line.
+ - Positional parameters are represented by variables '$0', '$1', '$2', ... 
+ - Where $0 represents the script that has been executed and $1 is the first positional parameter and $2 is the second positional parameter and so on. 
+- Each command line argument is delimited by space.
+- Below is example on Positional Parameters: 
+
+    ``` bash
+    ## content of a script file which displays the value of positional parameter from $0 - $10
+    #!/bin/bash 
+    
+    echo "The zeroth argument is: $0"
+    echo "The first argument is: $1"
+    echo "The second argument is: $2"
+    echo "The third argument is: $3"
+    echo "The fourth argument is: $4"
+    echo "The fifth argument is: $5"
+    echo "The sixth argument is: $6"
+    echo "The seventh argument is: $7"
+    echo "The eighth argument is: $8"
+    echo "The ninth argument is: $9"
+    echo "The tenth argument is: ${10}" ## to access values beyond $9, use ${x}
+
+    ## output of the script file 
+    dev@dev: ./script.sh 1 2 3 4 5 6 7 8 9 10
+    The zeroth argument is: /usr/bin/test.sh
+    The first argument is: 1
+    The second argument is: 2
+    The third argument is: 3
+    The fourth argument is: 4
+    The fifth argument is: 5
+    The sixth argument is: 6
+    The seventh argument is: 7
+    The eighth argument is: 8
+    The ninth argument is: 9
+    The tenth argument is: 10
+    ```
+## Determining Total Number of Arguments 
+ - To find out the total number of arguments supplied from the command line use "$#". 
+
+    ```bash
+       ## content of a script file 
+       ##displays the value of positional parameter from $0 - $4 and the total number of positional parameters
+    #!/bin/bash 
+    
+    echo "The zeroth argument is: $0"
+    echo "The first argument is: $1"
+    echo "The second argument is: $2"
+    echo "The third argument is: $3"
+    echo "The fourth argument is: $4"
+
+    
+    ## output of the script file
+    dev@dev: ./script.sh 1 2 3 4
+    The total number of positional parameter: 4
+    The zeroth argument is: /usr/bin/test.sh
+    The first argument is: 1
+    The second argument is: 2
+    The third argument is: 3
+    The fourth argument is: 4
+    ```
+
+ ## Passing Positional Parameter to Functions
+  - `$@` &nbsp; and &nbsp; `$*` &nbsp; are special parameters which expands into a list of positional parameters. They can be used to pass positional parameters to functions within scripts. 
+  
+    | Parameter | Description |
+    | ----------| -------------- |
+    | $*        | Expands into the list of positional parameters, starting with 1.                                 |
+    | $@        | Expands into the list of positional parameters, starting with 1.                                 |
+    | "$*"      | When surrounded by double quotes, it expands into a double quoted string containing all of the positional parameters.
+    | "$@"      | When surrounded by double quotes, it expands each positional parameter into a separate word.       |
+    
+    &nbsp; &nbsp; **Table 1.1** - The * and @ Special Parameters
+
+ - Example on [passing positional parameters to functions](./_Positional%20Parameters.md#passing%20positional%20parameter%20to%20functions).
+
+ ## Working With Positional Parameter using 'Shift'
+
+
+
