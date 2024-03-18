@@ -1,0 +1,5 @@
+- Subshells 
+- Group commands
+- Exit status 
+- Control Operator
+- Package Management
