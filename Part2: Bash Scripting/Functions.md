@@ -18,7 +18,7 @@
     ```
 
 ## Function Examples
-- Below is an example on function: 
+- More examples on [Functions](./_Functions%20Exmaples.md) and below is an example on function: 
 
     ```bash
     #!/bin/bash 
