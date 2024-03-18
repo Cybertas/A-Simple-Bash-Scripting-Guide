@@ -32,24 +32,33 @@
  - Examples on string variable assignments:
     
     ```bash
-    a=z # Assign the string "z" to variable a.
-    b="a string" # Embedded spaces must be within quotes.
-    c="a string and $b" # Other expansions such as variables can be expanded into the assignment.
-    d="$(ls -l foo.txt)" # Results of a command.
-    e=$((5 * 7)) # Arithmetic expansion.
+    a=z # assign the string "z" to variable a.
+    b="a string" # embedded spaces must be within quotes.
+    c="a string and $b" # other expansions such as variables can be expanded into the assignment.
+    d="$(ls -l foo.txt)" # assign results of a command.
+    e=$((5 * 7)) # assign arithmetic expansion.
     ```
 
  ### Integer Variable Type 
- - To declare an integer variable in Bash use `declare -i`. 
+ - To declare an integer variable in Bash use `declare -i`.
+- However it is not necessary since Bash provides ways to work with integers in string format. 
  - Examples on string variable assignments:
 
     ```bash
     ## declare an integer variable
     dev@dev: declare -i num=10
+
+
+    ## declare an integer as string
+    dev@dev: var1=5
+    dev@dev: var2=6
+    dev@dev: echo $(($var2-$var1)) ## using arithmetic expansion
+    1
     ```
  
  ### Constant Variable Type  
- - To declare a constant variable in Bash use `declare -r`. 
+ - To declare a constant variable in Bash using the `declare` command use `declare -r`. 
+ - It is also possible to declare a const variable following the naming standard where all letters are uppercase.
  - Examples on constant variable assignments:
 
     ```bash
@@ -76,7 +85,7 @@
  ### Local Variable Type 
  - To declare a local variable use the `local`.
  - Local variable are only accessible within the shell function in which they are defined and cease to exist once the shell function terminates. 
- - More details on [Functions]() & details example on [local variable](./_Variable%20Examples.md#local_variable_in_function).
+ - More details on [Functions]() & details example on [local variable](./_Variables%20Examples.md##local%20variable%20in%20function).
  - Examples on local variable type:
 
     ```bash
@@ -86,7 +95,7 @@
 
 
  ### Array & Nested Array
- - Please visit the [Arrays]() Page for more detail.
+ - Please visit the [Arrays](./Arrays.md) Page for more detail.
 
 
 ### Accessing Variable Values
