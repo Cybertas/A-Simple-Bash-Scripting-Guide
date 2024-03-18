@@ -16,9 +16,8 @@
 
     ```Bash
     ## example of content script file 
-    dev@dev: cat script.sh
-    #!/bin/Bash
-    echo "Hello from script" 
+    #!/bin/Bash - shebang
+    echo "Hello from script" - command
     ```
 
 ## Script Permission
