@@ -1,1 +1,183 @@
-## Flow Control: If Statements
+# Flow Control: If Statements
+ - Below is syntax of if statement in Bash. 
+
+    ``` bash
+    if [ CONDITION ]; then
+        COMMANDS
+    elif [ CONDITION ]; then
+        COMMANDS
+    else 
+        COMMANDS
+    fi
+
+    ## Note: space is require between [] and CONDITION
+    ```
+
+## Condition Checking with Test
+ - In Bash the `if` command are used with the `test` command where `test` command performs a variety of checks and comparisons and if is to check if value returned by test is true or false.
+ - Below are three forms of the `test` command:
+    - `test expression` - command expression form, where `test` evaluated as either true or false and return and exit status of 0 when true and 1 as false.
+    - `[expression]` - symbolic expression, where `[]` is equivalent to `test` and expression within the brackets gets evaluated. 
+    - `[[expression]]`- enhanced version, with addition of string expression. 
+ - Examples below: 
+    
+    ```bash
+    ## if statement without test
+    dev@dev: if true; then echo 'this is true'; fi
+    this is true
+
+    ## if statement using test
+    dev@dev: fruit=apple && if [ "$fruit" == "apple" ]; then echo 'this is true';fi
+    this is true
+    ```
+
+
+ ## Comparison Operators for Test
+  - Bash unlike other programming languages e.g. python where comparison operator can be used on different data types. The `test` command in Bash requires specific comparison operator on different types of data its evaluating. 
+  - Below are three data types `test` can evaluate:
+    - File - [File Comparison Operators]()
+    - String - [String Comparison Operators]()
+    - Integer - [Integer Comparison Operators]()
+
+### File Comparison Examples
+ - Below are some examples on file comparison: 
+
+    ```bash
+    #!/bin/bash
+
+    # test-file: evaluate the status of a file
+    FILE=~/.bashrc
+    
+    ## -e option checks if a file exists
+    if [ -e "$FILE" ]; then
+        
+        ## -f option checks if file exists and is a regular file
+        if [ -f "$FILE" ]; then
+            echo "$FILE is a regular file."
+        fi
+
+        ## -d option checks if file exists and is a directory
+        if [ -d "$FILE" ]; then
+            echo "$FILE is a directory."
+        fi
+
+        ## -r option check if file exists and is readable
+        if [ -r "$FILE" ]; then
+            echo "$FILE is readable."
+        fi
+
+        ## -w option check if file exists and is writable 
+        if [ -w "$FILE" ]; then
+            echo "$FILE is writable."
+        fi
+        ## -x option checks if file exists and is executable
+        if [ -x "$FILE" ]; then
+            echo "$FILE is executable/searchable."
+        fi
+    else
+            echo "$FILE does not exist"
+        exit 1
+    fi
+    exit
+    ```
+
+
+### String Comparison Examples
+ - Below are examples on string comparison:
+
+    ```bash
+    #!/bin/bash
+    # test-string: string comparison
+
+    str=""
+    str1="Hello"
+    str2="World!"
+    
+    if [ -n "$str" ]; then
+        echo "str is not null."
+    else
+        echo "str is null."
+    fi
+
+    if [ "$str1" == "$str2" ]; then
+        echo "str1 equals to str2." 
+    else  
+        echo "str1 does not equal to str2."
+    fi
+
+    ## output: 
+    ## null
+    ## str1 does not equal to str2
+
+    ```
+
+
+### Integer Comparison Examples
+ - Below are examples on integer comparison:  
+
+    ```bash
+    #!/bin/bash
+    # test-integer: evaluate the value of an integer.
+
+    INT=-5
+
+    if [ "$INT" -eq 0 ]; then
+        echo "INT is zero."
+    else
+        if [ "$INT" -lt 0 ]; then
+            echo "INT is negative."
+        else
+            echo "INT is positive."
+        fi
+
+        if [ $((INT % 2)) -eq 0 ]; then
+            echo "INT is even."
+        else
+            echo "INT is odd."
+        fi
+    fi
+
+    ## output:
+    ## INT is negative.
+    ## INT is odd.
+    ```
+
+## Boolean Logical Operators - AND, OR, NOT
+- Logical operators can be used to combine expression.
+- Below is a table that contains operators that can be used in Bash to present the logical operators. 
+
+   |   Operation   |   test command   |   [[]] and (())   |
+   | ------------- |  --------------  |   --------------  |
+   |  AND          | -a               |    &&             |
+   |  OR           | -o               |    ||             |
+   |  NOT          | !                |    !              |
+
+- The test command accepts both option notation as well as symbolic notion.
+- Below are examples on logical operators:
+
+    ```bash
+    #!/bin/bash
+
+    str1="Hello"
+    str2="World"
+
+    int1=5
+    int2=5
+
+    if [[ "$str1" == "$str2" && "$int1" -eq "$int2" ]]; then
+        echo "both str and int are same."
+
+    elif [[ "$str1" == "$str2" && "$int1" -ne "$int2" ]]; then
+        echo "strings are same, integers are not."
+
+    elif [[ "$str1" != "$str2" && "$int1" -eq "$int2" ]]; then
+        echo "strings are not the same, integers are."
+
+    else
+        echo "neither are the same" 
+    fi
+
+    ## output:
+    strings are not the same, integers are.
+
+    ```
