@@ -18,7 +18,7 @@
  - Below are three forms of the `test` command:
     - `test expression` - command expression form, where `test` evaluated as either true or false and return and exit status of 0 when true and 1 as false.
     - `[expression]` - symbolic expression, where `[]` is equivalent to `test` and expression within the brackets gets evaluated. 
-    - `[[expression]]`- enhanced version, with addition of string expression. 
+    - `[[expression]]`- enhanced version, with addition of regex string expression. 
  - Examples below: 
     
     ```bash
@@ -40,6 +40,7 @@
     - Integer - [Integer Comparison Operators]()
 
 ### File Comparison Examples
+ - For additional operator - [File Comparison Operators]()
  - Below are some examples on file comparison: 
 
     ```bash
@@ -83,6 +84,7 @@
 
 
 ### String Comparison Examples
+ - For additional operators - [String Comparison Operators]()
  - Below are examples on string comparison:
 
     ```bash
@@ -113,6 +115,7 @@
 
 
 ### Integer Comparison Examples
+ - For additional operators - [Integer Comparison Operators]()
  - Below are examples on integer comparison:  
 
     ```bash
