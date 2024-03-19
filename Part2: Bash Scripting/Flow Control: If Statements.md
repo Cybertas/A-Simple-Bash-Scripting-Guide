@@ -35,12 +35,12 @@
  ## Comparison Operators for Test
   - Bash unlike other programming languages e.g. python where comparison operator can be used on different data types. The `test` command in Bash requires specific comparison operator on different types of data its evaluating. 
   - Below are three data types `test` can evaluate:
-    - File - [File Comparison Operators]()
-    - String - [String Comparison Operators]()
-    - Integer - [Integer Comparison Operators]()
+    - File - [File Comparison Operators](./_Flow%20control:%20If%20Statements%20Examples.md#file%20comparison%20operators)
+    - String - [String Comparison Operators](./_Flow%20control:%20If%20Statements%20Examples.md#string%20comparison%20operators)
+    - Integer - [Integer Comparison Operators](./_Flow%20control:%20If%20Statements%20Examples.md#integer%20comparison%20operators)
 
 ### File Comparison Examples
- - For additional operator - [File Comparison Operators]()
+ - For additional operator - [File Comparison Operators](./_Flow%20control:%20If%20Statements%20Examples.md#file%20comparison%20operators)
  - Below are some examples on file comparison: 
 
     ```bash
@@ -84,7 +84,7 @@
 
 
 ### String Comparison Examples
- - For additional operators - [String Comparison Operators]()
+ - For additional operators - [String Comparison Operators](./_Flow%20control:%20If%20Statements%20Examples.md#string%20comparison%20operators)
  - Below are examples on string comparison:
 
     ```bash
@@ -115,7 +115,7 @@
 
 
 ### Integer Comparison Examples
- - For additional operators - [Integer Comparison Operators]()
+ - For additional operators - [Integer Comparison Operators](./_Flow%20control:%20If%20Statements%20Examples.md#integer%20comparison%20operators)
  - Below are examples on integer comparison:  
 
     ```bash
