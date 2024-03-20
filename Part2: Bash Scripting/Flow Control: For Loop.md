@@ -9,7 +9,7 @@
     done; 
     ```
 - `for` evaluates the CONDITION and if CONDITION is true then execute COMMANDS.
- After the COMMANDS have been executed for moves on to the next loop which then go back to evaluate the CONDITION.
+- After COMMANDS have been executed for moves on to the next loop which then goes back to evaluate the CONDITION.
 - The loop will be terminated if the CONDITION is false.
 
 ## For Loop - Iterating Through List of Items

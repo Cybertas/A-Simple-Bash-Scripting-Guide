@@ -9,7 +9,7 @@
     done
     ```
 - `while` evaluates the CONDITION and if CONDITION is true then execute COMMANDS
-- After the COMMANDS have been executed while moves on to the next loop which then go back to evaluate the CONDITION.
+- After COMMANDS have been executed while moves on to the next loop which then goes back to evaluate the CONDITION.
 - The loop will be terminated if the CONDITION is false.
 
 ## Examples on While Loop
