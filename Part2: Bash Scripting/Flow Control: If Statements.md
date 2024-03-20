@@ -1,4 +1,5 @@
 # Flow Control: If Statements
+ - If statement can be used to perform an action or series of actions based on true or false conditions.
  - Below is syntax of if statement in Bash. 
 
     ``` bash
@@ -9,12 +10,14 @@
     else 
         COMMANDS
     fi
-
     ## Note: space is require between [] and CONDITION
     ```
+ - `if` evaluates the CONDITION and when CONDITION is true then execute COMMANDS. 
+ - `elif` is going to be evaluated next when if returns false.
+ - `else` is the last statement that will execute when none of the if statements are true.
 
 ## Condition Checking with Test
- - In Bash the `if` command are used with the `test` command where `test` command performs a variety of checks and comparisons and if is to check if value returned by test is true or false.
+ - In Bash the `if` command is often used with the `test` command where `test` command performs a variety of checks and if command checks the value returned by test then performs some actions if value is true.
  - Below are three forms of the `test` command:
     - `test expression` - command expression form, where `test` evaluated as either true or false and return and exit status of 0 when true and 1 as false.
     - `[expression]` - symbolic expression, where `[]` is equivalent to `test` and expression within the brackets gets evaluated. 
