@@ -42,7 +42,7 @@
     dev@dev: read -ed '/' myInp
     This/ ## doesnt capture delete 
 
-    ## the i option
+    ## the -i option
     dev@dev: read -ie "What is your name? default: $USER" myInp ## if you hit enter the value stored in myInp will be the string 
     What is your name? default: dev
     dev@dev: echo $myInp
@@ -55,14 +55,14 @@
     dev@dev: echo $myInp
     What is your name? My name is dev
 
-    ## the n option
+    ## the -n option
     ## read command exits when n length of input is met
     dev@dev: read -n 3 myInp
     yes
     dev@dev: echo myInp 
     yes 
 
-    ## the p option
+    ## the -p option
     dev@dev: read -p "What is your name?: " myInp
     What is your name?: dev ## prompts for input with string as message
     dev@dev: echo $myInp
