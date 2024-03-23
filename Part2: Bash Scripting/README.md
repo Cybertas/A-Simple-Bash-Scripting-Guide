@@ -20,7 +20,7 @@ If you're interested in learning Bash Scripting, follow this recommended reading
 6. [Reading Keyboard Input](./06.Reading%20Keyboard%20Input.md)
    - Discover methods for reading user input from the keyboard in Bash scripts.
    
-7. [Arrays](./07.Arrays.md) 
+7. [Arrays & Nested](./07.Arrays.md) 
    - Explore the usage and manipulation of arrays in Bash scripting.
 
 8. [Flow Control: If Statements](./08.Flow%20Control:%20If%20Statements.md)
@@ -32,7 +32,7 @@ If you're interested in learning Bash Scripting, follow this recommended reading
 10. [Flow Control: For Loop](./10.Flow%20Control:%20For%20Loop.md)
     - Understand how to use for loops for iterative tasks in Bash scripts.
 
-11. [Flow Control: While and Unitl Loop](./11.Flow%20Control:%20While%20and%20Until%20Loop.md)
+11. [Flow Control: While and Until Loop](./11.Flow%20Control:%20While%20and%20Until%20Loop.md)
     - Learn about while and until loops for repetitive tasks with different termination conditions.
    
 12. [Exotica](./12.Exotica.md)
