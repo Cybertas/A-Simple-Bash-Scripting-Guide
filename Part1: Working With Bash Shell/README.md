@@ -27,7 +27,7 @@ If you're interested in learning Bash shell, follow this recommended reading ord
    - Learn about different types of expansions and their usage.
 
 9. [Quoting](./09.Quoting.md)
-   - Master the quoting mechanisms in Bash for proper command interpretation.
+   - Explore the quoting mechanisms in Bash for proper command interpretation.
 
 10. [Redirection & Pipeline](./10.Redirection%20&%20Pipeline.md)
     - Understand how to redirect input and output and create command pipelines.
